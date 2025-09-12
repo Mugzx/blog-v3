@@ -7,6 +7,7 @@ const layoutStore = useLayoutStore()
 layoutStore.setAside([])
 
 const { data: postLink } = await useAsyncData('/link', () => queryCollection('content').path('/link').first())
+const { data: descLink } = await useAsyncData('/desc', () => queryCollection('content').path('/desc').first())
 useSeoMeta({
 	title: '友链',
 	ogType: 'profile',
@@ -29,7 +30,7 @@ const copyFields = {
 
 <FeedGroup :feeds />
 
-<Tab :tabs="['我的博客信息', '申请友链']" center>
+<Tab :tabs="['驿站信息', '申请友链', '格式说明']" center>
 	<template #tab1>
 		<div class="link-tab">
 			<FeedCard v-bind="myFeed" />
@@ -44,6 +45,16 @@ const copyFields = {
 		/>
 		<p v-else class="text-center">
 			可于 link.md 配置友链补充说明。
+		</p>
+	</template>
+	<template #tab3>
+		<ContentRenderer
+			v-if="descLink"
+			:value="descLink"
+			class="article"
+		/>
+		<p v-else class="text-center">
+			可于 desc.md 配置友链补充说明。
 		</p>
 	</template>
 </Tab>

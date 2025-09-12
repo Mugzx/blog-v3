@@ -8,7 +8,7 @@ export type ImgService = keyof typeof services | boolean
 
 // https://wsrv.nl/docs/quick-reference.html
 export function getGhAvatar(name = '', options: Record<string, any> = { size: 92 }) {
-	const srcUrl = `github.com/${name}.png?size=${options.size}`
+	const srcUrl = `github.com/${name}.png?size=${options.size}&output=webp`
 	delete options.size
 
 	const params = new URLSearchParams(srcUrl)

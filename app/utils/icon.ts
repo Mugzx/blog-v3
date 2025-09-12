@@ -68,6 +68,7 @@ const mainDomainIcons: Record<string, string> = {
 // @keep-sorted
 export const domainIcons: Record<string, string> = {
 	'developer.mozilla.org': 'simple-icons:mdnwebdocs',
+	'developers.cloudflare.com': 'simple-icons:cloudflare',
 	'mp.weixin.qq.com': 'ri:wechat-fill',
 }
 
