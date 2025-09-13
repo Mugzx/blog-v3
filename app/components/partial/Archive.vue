@@ -74,7 +74,7 @@ const auxDateLabel = computed(() => props.date
 	position: absolute;
 	opacity: 0.8;
 	top: 0;
-	right: 0;
+	inset-inline-end: 0;
 	width: min(30%, 140px);
 	height: 100%;
 	margin: 0;
