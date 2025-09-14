@@ -6,11 +6,11 @@
 	bg-img="https://p.qlogo.cn/gh/938973313/938973313/100/"
 	bg-right
 >
-	<div class="title">
+	<div class="title text-creative">
 		交流电台
 	</div>
 
-	<Tip copy icon="oui:empty" :tip-options="{ placement: 'left' }">
+	<Tip copy :icon="false" :tip-options="{ placement: 'left' }">
 		<Icon name="ri:qq-fill" />938973313
 	</Tip>
 </ZWidget>
@@ -34,8 +34,8 @@
 }
 
 .tip {
-	margin: 0.2em 0;
 	font-size: 0.9em;
+	line-height: 2;
 }
 
 :deep(.bg-img).bg-img.bg-img {
