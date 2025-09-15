@@ -17,7 +17,7 @@ references:
 生成新密钥。
 
 ```bash
-ssh-keygen -t ed25519 -C "example@example.com
+ssh-keygen -t ed25519 -C "example@example.com"
 ```
 
 如果和现在的 SSH 认证密钥冲突，就需要另外指定文件的名称。
@@ -31,7 +31,7 @@ ssh-keygen -t ed25519 -C "example@example.com" -f ~/.ssh/id_ed25519_signing
 ```bash
 # 创建允许的签名者配置文件
 touch ~/.ssh/allowed_signers
-# 复制的签名公钥内容
+# 复制签名公钥内容
 cat ~/.ssh/id_ed25519_signing.pub
 ```
 
