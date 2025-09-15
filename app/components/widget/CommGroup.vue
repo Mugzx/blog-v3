@@ -2,7 +2,7 @@
 <ZWidget
 	card
 	dim
-	title="博客/杂谈社区"
+	title="驿站/杂谈社区"
 	bg-img="https://p.qlogo.cn/gh/938973313/938973313/100/"
 	bg-right
 >

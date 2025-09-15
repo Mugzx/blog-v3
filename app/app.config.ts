@@ -91,10 +91,10 @@ export default defineAppConfig({
 		{
 			title: '',
 			items: [
-				{ icon: 'ph:files-bold', text: '驻站笔记', url: '/' },
-				{ icon: 'ph:link-bold', text: '站友电台', url: '/link' },
-				{ icon: 'ph:archive-bold', text: '驿站仓库', url: '/archive' },
-				{ icon: 'ph:info-bold', text: '我与驿站', url: '/about' },
+				{ icon: 'ph:files-bold', text: '文章', url: '/' },
+				{ icon: 'ph:link-bold', text: '友链', url: '/link' },
+				{ icon: 'ph:archive-bold', text: '归档', url: '/archive' },
+				{ icon: 'ph:info-bold', text: '关于', url: '/about' },
 			],
 		},
 	] satisfies Nav,
