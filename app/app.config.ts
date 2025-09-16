@@ -1,5 +1,6 @@
 import type { Nav, NavItem } from '~/types/nav'
 import blogConfig from '~~/blog.config'
+import { version } from '~~/package.json'
 
 // 图标查询：https://yesicon.app/ph
 // 图标插件：https://marketplace.visualstudio.com/items?itemName=antfu.iconify
@@ -69,7 +70,7 @@ export default defineAppConfig({
 			{
 				title: '信息',
 				items: [
-					{ icon: 'simple-icons:nuxtdotjs', text: 'L33Z22L11/blog-v3', url: 'https://github.com/L33Z22L11/blog-v3' },
+					{ icon: 'simple-icons:nuxtdotjs', text: `主题: Clarity-${version}`, url: 'https://github.com/L33Z22L11/blog-v3' },
 					{ icon: 'ph:hourglass-low-bold', text: 'Uptime站点监测', url: 'https://s.mugzx.top' },
 					{ icon: 'ph:certificate-bold', text: '萌备20259900号', url: 'https://icp.gov.moe/?keyword=20259900' },
 				],
