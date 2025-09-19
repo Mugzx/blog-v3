@@ -45,7 +45,7 @@ export default defineAppConfig({
 		iconNav: [
 			{ icon: 'ph:house-bold', text: '个人主页', url: blogConfig.author.homepage },
 			{ icon: 'ri:qq-line', text: '交流电台', url: 'https://qm.qq.com/q/lZxfLjrbxu' },
-			{ icon: 'ph:github-logo-bold', text: 'GitHub: Mugzx', url: 'https://github.com/mugzx' },
+			{ icon: 'ph:github-logo-bold', text: 'GitHub: Mugzx', url: 'https://github.com/Mugzx' },
 			{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
 			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/go.html' },
 		] satisfies NavItem[],
@@ -62,7 +62,7 @@ export default defineAppConfig({
 			{
 				title: '社交',
 				items: [
-					{ icon: 'ph:github-logo-bold', text: 'Mugzx', url: 'https://github.com/mugzx' },
+					{ icon: 'ph:github-logo-bold', text: 'Mugzx', url: 'https://github.com/Mugzx' },
 					{ icon: 'ri:qq-line', text: '交流电台', url: 'https://qm.qq.com/q/lZxfLjrbxu' },
 					{ icon: 'ph:envelope-simple-bold', text: blogConfig.author.email, url: `mailto:${blogConfig.author.email}` },
 				],
@@ -80,7 +80,7 @@ export default defineAppConfig({
 
 	/** 左侧栏顶部 Logo */
 	header: {
-		logo: 'https://weavatar.com/avatar/7e3dc62d2db6965f993ee5e0bc6dea56a8d401fcf5271b3029582ed25232ad0d?d=blank&s=160',
+		logo: 'https://weavatar.com/avatar/7e3dc62d2db6965f993ee5e0bc6dea56a8d401fcf5271b3029582ed25232ad0d?&s=160',
 		/** 展示标题文本，否则展示纯 Logo */
 		showTitle: true,
 		subtitle: blogConfig.subtitle,
