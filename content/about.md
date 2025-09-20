@@ -11,7 +11,7 @@ type: story
 ::card-list
 - `Mu`是`Moon`的音译。
 - `gzx`是`光之下`的拼音缩写。
-- `Moongzx`，意为：月光之下。
+- `Moongzx`，意为：暮光之下。<!--名字好中二-->
 ::
 
 ::quote
