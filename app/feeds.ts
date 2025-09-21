@@ -65,7 +65,7 @@ export default [
 			},
 			{
 				author: 'xzadudu179',
-				sitenick: '小窝',
+				sitenick: '太空基地',
 				title: 'XME-Home',
 				desc: 'xzadudu179的太空基地',
 				link: 'https://www.xzadudu179.top',

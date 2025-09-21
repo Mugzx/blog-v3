@@ -38,7 +38,7 @@ const copyFields = {
 
 <FeedGroup :feeds />
 
-<Tab :tabs="['驿站信息', '申请友链', '格式说明']" center>
+<Tab :tabs="['我的博客信息', '申请友链', '格式说明']" center>
 	<template #tab1>
 		<div class="link-tab">
 			<FeedCard v-bind="myFeed" />

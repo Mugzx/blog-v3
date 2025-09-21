@@ -6,16 +6,17 @@
 - 申请方式：在评论区留言或发送邮件到 :tip{text="me@mugzx.top" copy}
   - 标题注明 `友链申请: 你的昵称`
   - 以 :tip[任意形式]{tip="指向信息的 URL、自然语言、编程语言"} 附上友链信息
-    ````md
-    ```ts
-    export default {
-      author: '博主称呼',
-      link: '博客地址',
-      icon: '站点图标',
-      avatar: '博主头像',
-      date: '申请日期',
-    } satisfies Friend
-    ```
-    ````
-- ⚠️ 信息可能会被适当修改，以保证展示效果
-  - 在 **格式说明** 里我还会补充其余的友链信息…
+
+````md
+```ts
+  export default {
+  author: '博主称呼',
+  link: '博客地址',
+  icon: '站点图标',
+  avatar: '博主头像',
+  } satisfies Friend
+```
+````
+
+- 信息可能会被适当修改，以保证展示效果
+- 在 **格式说明** 里我还会补充其余的友链信息…
