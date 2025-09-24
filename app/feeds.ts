@@ -62,6 +62,8 @@ export default [
 				archs: ['Halo', '服务器'],
 				date: '2025-02-07',
 				comment: '分享折腾经历，目前文章停更。',
+				error: 'HTTP ERROR 500',
+
 			},
 			{
 				author: 'xzadudu179',
@@ -97,7 +99,7 @@ export default [
 				feed: 'https://blog.adproqwq.top/atom.xml',
 				// icon: getFavicon('blog.adproqwq.top'),
 				icon: 'https://weavatar.com/avatar/4a26406a570f6a31ca7ab85ee47b74bc471e92aeb67cd346ad7e9d9423091617?s=32',
-				avatar: getGhAvatar('adproqwq'),
+				avatar: 'https://weavatar.com/avatar/4a26406a570f6a31ca7ab85ee47b74bc471e92aeb67cd346ad7e9d9423091617?s=92',
 				archs: ['Vue', 'Vercel'], // 并不准确
 				date: '2025-07-25',
 				comment: '业余前端开发，维护着各类好东西。',
@@ -114,7 +116,7 @@ export default [
 				avatar: 'https://weavatar.com/avatar/61e0d811023a56df6cbf0f148f6ef69fabfb71b1882f1fe16996d0859be6ea4b?s=92',
 				archs: ['Hexo', 'Vercel'],
 				date: '2025-08-28',
-				// comment: '学生，折腾博客。',
+				comment: '学生，折腾博客主题。',
 			},
 		],
 	},

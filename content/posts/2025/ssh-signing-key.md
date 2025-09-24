@@ -52,7 +52,7 @@ git config --global gpg.format ssh
 git config --global user.signingkey ~/.ssh/id_ed25519_signing
 # 指定允许的签名者配置文件的路径
 git config --global gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers
-# 自动提交签名
+# 自动签名提交
 git config --global commit.gpgsign true
 ```
 现在前往 [SSH and GPG keys](https://github.com/settings/keys) 继续配置；点击 **New SSH key**，类型选择`Signing Key`，添加名称和公钥。
