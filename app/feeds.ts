@@ -62,7 +62,6 @@ export default [
 				archs: ['Halo', '服务器'],
 				date: '2025-02-07',
 				comment: '分享折腾经历，目前文章停更。',
-				error: 'HTTP ERROR 500',
 
 			},
 			{
