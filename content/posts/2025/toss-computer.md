@@ -39,7 +39,7 @@ caption: RG-EW3000GX
 
 ::pic
 ---
-src: https://mu-s4.s3.bitiful.net/2025/09/1759162428.avif!style=1
+src: https://mu-s4.s3.bitiful.net/2025/09/1759231825.avif!style=1
 caption: 中间部分疑似主板烧坏，右边固定螺丝接近脱落。
 ---
 ::
