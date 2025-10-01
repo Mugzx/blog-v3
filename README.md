@@ -1,4 +1,4 @@
-# 地球驿站
+# 鸽木交流电
 
 [![框架](https://img.shields.io/badge/框架-Nuxt-00DC82?logo=Nuxt.js)](https://nuxt.com/)
 [![CMS](https://img.shields.io/badge/CMS-Nuxt%20Content-00DC82?logo=Nuxt.js)](https://content.nuxt.com/)
@@ -7,7 +7,7 @@
 [![代码风格](https://img.shields.io/badge/代码风格-ESLint-4B32C3?logo=ESLint)](https://eslint.org/)
 [![代码风格](https://img.shields.io/badge/代码风格-Stylelint-263238?logo=Stylelint)](https://stylelint.io/)
 
-地球驿站于 2025 年 1 月 24 日重新上线。
+鸽木交流电于 2025 年 1 月 24 日重新上线。
 
 > [!WARNING]
 >
@@ -27,7 +27,7 @@
 | [希乐博客](https://blog.xlenco.top/)        | Xlenco        | v3.4.0       | 最新评论                       |
 | [SteinsNote](https://blog.labmem.chat/)     | Labmem-00     | v3.1-241112  | 专栏                           |
 | [月空人](https://whbbit.cn/)                | Whbbit1999    | v3.4.8       | 项目/博客/Snippets页           |
-| [地球驿站](https://blog.mugzx.top/)         | mugzx         | v3.4.8       | 设计风格统一                   |
+| [鸽木交流电](https://blog.mugzx.top/)         | mugzx         | v3.4.8       | 设计风格统一                   |
 | [喵落阁](https://blog-v3.kemeow.top/)       | Kemeow815     | v3.4.6       | 即刻+友圈+最新评论+游戏/番剧页 |
 | [梦爱吃鱼](https://blog.ruom.top/)          | JLinmr        | v3.2-250304  | 即刻+友圈+最新评论             |
 | [Mikuの极光星](https://blog.sotkg.com/)     | PaloMiku      | v3.4.5       | 设计风格统一                   |

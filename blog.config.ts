@@ -3,10 +3,10 @@ import type { FeedEntry } from './app/types/feed'
 export { zhCN as dateLocale } from 'date-fns/locale/zh-CN'
 
 const basicConfig = {
-	title: '地球驿站',
+	title: '鸽木交流电',
 	subtitle: '向上革命，向下实践。',
 	// 长 description 利好于 SEO
-	description: '这里是 Mugzx 的个人博客，名为地球驿站，平时会记录我对日常生活的一些观点看法，偶尔也会回归正业写一点技术型文章，欢迎大家多多前来访问！',
+	description: '这里是 Mugzx 的个人博客，名为鸽木交流电，平时会记录我对日常生活的一些观点看法，偶尔也会回归正业写一点技术型文章，欢迎大家多多前来访问！',
 	author: {
 		name: 'Mugzx',
 		avatar: 'https://www.mugzx.top/api/avatar.png',
@@ -81,7 +81,7 @@ const blogConfig = {
 /** 用于生成 OPML 和友链页面配置 */
 export const myFeed: FeedEntry = {
 	author: blogConfig.author.name,
-	sitenick: '驿站',
+	sitenick: '电台',
 	title: blogConfig.title,
 	desc: blogConfig.subtitle || blogConfig.description,
 	link: blogConfig.url,
