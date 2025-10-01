@@ -45,7 +45,7 @@ export default defineAppConfig({
 		iconNav: [
 			{ icon: 'ph:house-bold', text: '个人主页', url: blogConfig.author.homepage },
 			{ icon: 'ri:qq-line', text: '交流电台', url: 'https://qm.qq.com/q/lZxfLjrbxu' },
-			{ icon: 'ph:github-logo-bold', text: 'GitHub: Mugzx', url: 'https://github.com/Mugzx' },
+			{ icon: 'ph:github-logo-bold', text: 'GitHub: Mugzx (鸽木)', url: 'https://github.com/Mugzx' },
 			{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
 			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/go.html' },
 		] satisfies NavItem[],
@@ -62,7 +62,7 @@ export default defineAppConfig({
 			{
 				title: '社交',
 				items: [
-					{ icon: 'ph:github-logo-bold', text: 'Mugzx', url: 'https://github.com/Mugzx' },
+					{ icon: 'ph:github-logo-bold', text: 'Mugzx (鸽木)', url: 'https://github.com/Mugzx' },
 					{ icon: 'ri:qq-line', text: '交流电台', url: 'https://qm.qq.com/q/lZxfLjrbxu' },
 					{ icon: 'ph:envelope-simple-bold', text: blogConfig.author.email, url: `mailto:${blogConfig.author.email}` },
 				],
