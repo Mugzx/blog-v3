@@ -117,17 +117,6 @@ export default [
 				date: '2025-08-28',
 				comment: '学生，折腾博客主题。',
 			},
-			{
-				author: 'VnYzm',
-				title: 'VnYzm的博客',
-				desc: '分享技术心得和摸鱼感想',
-				link: 'https://zimingyuan.github.io/',
-				icon: 'https://zimingyuan.github.io/img/favicon.ico',
-				avatar: getGhAvatar('ZimingYuan'),
-				archs: ['Python', 'GitHub Pages'],
-				date: '2025-10-01',
-				comment: '动漫观后感、游戏玩后感、技术笔记。',
-			},
 		],
 	},
 	/* ========从此处新增友链======== */
