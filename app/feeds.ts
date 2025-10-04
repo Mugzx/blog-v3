@@ -160,7 +160,7 @@ export default [
 				avatar: getGhAvatar('criwits'),
 				archs: ['Hugo', '国内 CDN'],
 				date: '2025-08-02',
-				comment: '电脑使用参考',
+				comment: '文笔以及电脑使用参考',
 			},
 			{
 				author: '月空人',
