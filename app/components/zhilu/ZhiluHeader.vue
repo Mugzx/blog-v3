@@ -22,9 +22,8 @@ const appConfig = useAppConfig()
 	<div v-if="appConfig.header.showTitle" class="zhilu-text">
 		<div class="header-title">
 			<span
-				v-for="(char, charIndex) in appConfig.title"
+				v-for="(char, charIndex) in appConfig.author.name"
 				:key="charIndex"
-				class="split-char"
 				:style="{ '--delay': `${(charIndex + 1) * .1}s` }"
 				v-text="char"
 			/>
