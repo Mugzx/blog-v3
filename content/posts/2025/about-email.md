@@ -14,7 +14,7 @@ references:
 
 电子邮件是依托网络的「邮递服务」，你有给自己评论通知配置好一个邮箱吗🫠？
 
-### 聊天记录片段
+### 聊天片段
 
 ::chat
 {:2025-10-01 09:03}
@@ -39,12 +39,12 @@ references:
 
 8天前的邮件了（
 
-{.Mugzx}
+{.}
 
 引用：垃圾outlook天天把一堆重要邮件扔到垃圾邮件里，下次换成gmail\
 使用企业邮吧
 
-{.Mugzx}
+{.}
 
 gmail没那么好用的
 
@@ -68,7 +68,7 @@ gmail没那么好用的
 在填写了真实姓名之后会为你提供一个由姓名生成的`拼音@gmjld1.wecom.work`邮箱。而个人姓名多少还算是敏感数据的一部分，这未免太不注重隐私了。
 ::
 
-在三家的邮箱服务中，它展示的 DNS 记录最不完整，其余记录需要在[企业邮箱如何设置DMARC（TXT记录）-帮助中心-企业微信](https://open.work.weixin.qq.com/help2/pc/19820)查看。
+在三家的邮箱服务中，它展示的 DNS 记录最不完整，其余记录需要在 [企业邮箱如何设置DMARC（TXT记录）](https://open.work.weixin.qq.com/help2/pc/19820) 查看。
 
 ### 网易
 
@@ -85,13 +85,13 @@ gmail没那么好用的
 飞书对于垃圾邮件进行了严格的防范，在邮件通知测试时我一度以为是~~屏蔽了国外IP~~导致的无法接收邮件。
 
 ::alert
-邮箱域名的 DNS 记录除了 MX、SPF 以外还需要配置 DKIM 和 DMARC，关于配置可以参考[管理员为域名配置 DKIM](https://www.feishu.cn/hc/zh-CN/articles/386580981044)与[管理员为域名配置 DMARC](https://www.feishu.cn/hc/zh-CN/articles/726331581389)两篇文章。
+邮箱域名的 DNS 记录除了 MX、SPF 以外还需要配置 DKIM 和 DMARC，关于配置可以参考 [管理员为域名配置 DKIM](https://www.feishu.cn/hc/zh-CN/articles/386580981044) 与 [管理员为域名配置 DMARC](https://www.feishu.cn/hc/zh-CN/articles/726331581389) 两篇文章。
 ::
 
-由于飞书对于手机号的限制，同一个手机号无法添加多个成员。如果需要配置一个用于通知的邮箱，在[公共邮箱](https://feishu.cn/admin/email/accountManagement/sharedEmail)创建即可。
+由于飞书对于手机号的限制，同一个手机号无法添加多个成员。如果需要配置一个用于通知的邮箱，在 [公共邮箱](https://feishu.cn/admin/email/accountManagement/sharedEmail) 创建即可。
 
 ## 总结
 
 :quote[没有永远好用的邮箱服务，不要完全信任厂商的后续操作。]
 
-最后你可以使用[mail-tester.com](https://www.mail-tester.com/?lang=zh)写一份不那么简短的邮件**测试一下垃圾邮件匹配度🫠。**
+最后你可以使用 [mail-tester.com](https://www.mail-tester.com/?lang=zh) 写一份不那么简短的邮件**测试一下垃圾邮件匹配度🫠。**

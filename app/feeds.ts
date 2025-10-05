@@ -9,8 +9,7 @@ export default [
 		entries: [
 			{
 				author: 'LineXic',
-				sitenick: '书屋',
-				title: 'LineXic书屋',
+				title: 'LineXic\'s website',
 				desc: '难离难舍，想抱紧些。',
 				link: 'https://www.linexic.top',
 				feed: 'https://www.linexic.top/rss.xml',
@@ -140,7 +139,7 @@ export default [
 			},
 			{
 				author: 'Alex John',
-				title: ' Alex John\'Blog',
+				title: ' Alex John\'s Blog',
 				link: 'https://hdalex.top',
 				// icon: getFavicon('hdalex.top'),
 				icon: 'https://hdalex.top/favicon.ico',
