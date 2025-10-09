@@ -21,7 +21,7 @@ references:
 
 {.Mugzx}
 
-［一张RefactX Project的友链页面截图］
+［一张友链页面截图］
 
 {:省略了一些聊天记录…}
 
@@ -72,7 +72,7 @@ gmail没那么好用的
 
 ### 网易
 
-:tip[网易]{tip="唯一没有强制绑定自家办公软件的邮箱服务"}最初是靠邮箱起家的，是一家 [「老牌的邮箱服务提供商」]{.text-story}。
+:tip[网易]{tip="唯一没有强制绑定自家办公软件的邮箱服务"}最初是靠邮箱起家的，是一家[「老牌的邮箱服务提供商」]{.text-story}。
 
 注册之后会生成一个由`个人名称@企业名称.freeqiye.com`组成的邮箱，添加记录时会展示完整的 MX、SPF、DKIM 和 DMARC 记录，不需要额外寻找。
 
@@ -90,8 +90,6 @@ gmail没那么好用的
 
 由于飞书对于手机号的限制，同一个手机号无法添加多个成员。如果需要配置一个用于通知的邮箱，在 [公共邮箱](https://feishu.cn/admin/email/accountManagement/sharedEmail) 创建即可。
 
-## 总结
+## 垃圾邮件
 
-:quote[没有永远好用的邮箱服务，不要完全信任厂商的后续操作。]
-
-最后你可以使用 [mail-tester.com](https://www.mail-tester.com/?lang=zh) 写一份不那么简短的邮件**测试一下垃圾邮件匹配度🫠。**
+最后你可以使用 [mail-tester.com](https://www.mail-tester.com/?lang=zh) 写一份不那么简短的邮件**测试一下垃圾邮件匹配度**🫠。

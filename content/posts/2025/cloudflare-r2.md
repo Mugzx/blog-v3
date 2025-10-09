@@ -61,17 +61,13 @@ tags: [存储]
 
 我将封面图片迁往 Cloudflare R2，但需要颜色管理以及更快加载的图片依旧是原来的 Bitiful S4。
 
-使用 Cloudflare Images 可以转换图像。
+### 转换图像
 
 ```
 https://<ZONE>/cdn-cgi/image/<OPTIONS>/<SOURCE-IMAGE>
 ```
 
-根据[官方文档](https://developers.cloudflare.com/images/transform-images/transform-via-url/#options)的内容，将`<ZONE>`修改为你的域名，`<OPTIONS>`修改为处理参数，`<SOURCE-IMAGE>`修改为图片的路径即可启用 Cloudflare Images。
-
-```
-https://r2.mugzx.top/cdn-cgi/image/f=avif/259e8d4196fea827025c2927a6fcd6e98d030057371238a77ae4cddebce86477.png
-```
+根据 [官方文档](https://developers.cloudflare.com/images/transform-images/transform-via-url/#options) 的描述，将`<ZONE>`修改为你的域名，`<OPTIONS>`修改为处理参数，`<SOURCE-IMAGE>`修改为图片的路径即可启用 Cloudflare Images。
 
 ## 访问配置
 
@@ -134,8 +130,21 @@ https://r2.mugzx.top/cdn-cgi/image/f=avif/259e8d4196fea827025c2927a6fcd6e98d0300
 
 经常更换图片可以设置为7至14天内，不经常更换可以设置为1年，缓存配置会影响文件更新，当桶内资源发生变化但链接内容**没有变化**时，可以手动清除缓存。
 
+::alert
+#title
+关于Edgeone如何配置R2存储桶
+#default
+- [对象存储类源站配置实践](https://cloud.tencent.com/document/product/1552/122800)
+- [CORS 跨域响应配置](https://cloud.tencent.com/document/product/1552/120718)
+- [EdgeOne 防盗链实践教程](https://cloud.tencent.com/document/product/1552/108736)
+- [自定义速率限制规则](https://cloud.tencent.com/document/product/1552/93130)
+- [缓存配置](https://cloud.tencent.com/document/product/1552/94478)
+::
+
 ## 感谢 Cloudflare
 
-:quote[至此，图床配置完成。]
+::quote
+至此，图床配置完成。
+::
 
 此 Cloudflare 之 Bug 不止于 R2，切勿过分滥用，用作违法之行径。
