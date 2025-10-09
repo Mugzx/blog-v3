@@ -19,6 +19,7 @@ const archIcons = {
 	'Next.js': 'simple-icons:nextdotjs',
 	'Nuxt': 'simple-icons:nuxtdotjs',
 	'Python': 'simple-icons:python',
+	'React': 'simple-icons:react',
 	'Typecho': 'icon-park-solid:align-text-left-one', // 不准确
 	'Vercel': 'simple-icons:vercel',
 	'VitePress': 'simple-icons:vitepress',
