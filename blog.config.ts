@@ -66,15 +66,15 @@ const blogConfig = {
 	/** 向 <head> 中添加脚本 */
 	scripts: [
 		// 自己部署的 Umami 统计服务
-		{ 'src': 'https://u.mugzx.top/script.js', 'data-website-id': '67b04aa0-edac-456d-bbe1-7ddd2bff9008', 'defer': true },
+		{ 'src': 'https://umami.mugzx.top/script.js', 'data-website-id': '67b04aa0-edac-456d-bbe1-7ddd2bff9008', 'defer': true },
 		// Twikoo 评论系统
 		{ src: 'https://s4.zstatic.net/ajax/libs/twikoo/1.6.44/twikoo.min.js', defer: true },
 	],
 
 	/** 自己部署的 Twikoo 服务 */
 	twikoo: {
-		envId: 'https://t.mugzx.top',
-		preload: 'https://t.mugzx.top',
+		envId: 'https://twikoo.mugzx.top',
+		preload: 'https://twikoo.mugzx.top',
 	},
 }
 
