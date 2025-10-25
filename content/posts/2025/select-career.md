@@ -1,11 +1,14 @@
 ---
 title: 《青年在选择职业时的考虑》
-description: 文章作了一些简要的笔记进行记录。
+description: 《青年在选择职业时的考虑》是德国思想家卡尔·亨利希·马克思于1835年8月12日完成的中学毕业作文，原为其特里尔中学德语试卷 ——— 我在该文章中作了一些简要的笔记进行记录。
 date: 2025-09-16 00:47:54
 updated: 2025-09-19 17:28:20
 type: story
 categories: [哲学]
 tags: [哲学, 马克思主义]
+references:
+  - title: 卡·马克思：青年在选择职业时的考虑
+    link: https://www.marxists.org/chinese/marx/marxist.org-chinese-marx-1835-8.htm
 ---
 
 ## 卡尔·马克思的中学考试德语作文

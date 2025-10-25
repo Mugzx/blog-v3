@@ -1,10 +1,11 @@
 ---
 title: 简短批判一系列新兴备案项目
-description: 简短批判近期中文独立博客圈的“新兴备案项目”。揭露其从“明码标价”到“宣称公益”的虚伪转变，分析这种趋利性模式的不可持续性，并痛批其批量广告对独立博客圈评论生态和内容价值的污染。
+description: 批判近期中文独立博客圈的“新兴备案项目”，揭露其中的虚伪转变，分析这种趋利本质，批判其批量广告对于评论生态和内容价值的污染。
 date: 2025-10-04 22:39:14
 updated: 2025-10-19 17:57:51
 type: story
 categories: [随笔]
+tags: [批判, 博客]
 references:
   - title: 新兴“备案”就是一场韭菜骗局 - 荧光
     link: https://i.duckxu.com/archives/idiot_blog_group_and_regist_num.html
