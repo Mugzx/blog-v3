@@ -63,7 +63,7 @@ export default defineAppConfig({
 				title: '社交',
 				items: [
 					{ icon: 'ph:github-logo-bold', text: 'Mugzx', url: 'https://github.com/Mugzx' },
-					{ icon: 'ri:qq-line', text: '交流电台', url: 'https://qm.qq.com/q/lZxfLjrbxu' },
+					{ icon: 'ri:bilibili-fill', text: 'Mugzx', url: 'https://space.bilibili.com/487110375' },
 					{ icon: 'ph:envelope-simple-bold', text: blogConfig.author.email, url: `mailto:${blogConfig.author.email}` },
 				],
 			},
@@ -95,6 +95,7 @@ export default defineAppConfig({
 				{ icon: 'ph:files-bold', text: '文章', url: '/' },
 				{ icon: 'ph:link-bold', text: '友链', url: '/link' },
 				{ icon: 'ph:archive-bold', text: '归档', url: '/archive' },
+				{ icon: 'ph:calendar-bold', text: '计划', url: 'https://fcno3o5nvedu.feishu.cn/wiki/RWd2w85DCi3LWqk3QyUcLNxwnDh' },
 			],
 		},
 	] satisfies Nav,
