@@ -16,12 +16,12 @@
           "value": "application/xml"
         }
       ],
-      "source": "/zhilu.opml"
+      "source": "/mugzx.opml"
     }
   ],
   "redirects": [
     {
-      "destination": "https://www.zhilu.site/api/icon",
+      "destination": "https://www.mugzx.top/api/icon",
       "source": "/favicon.ico",
       "status": 308
     }

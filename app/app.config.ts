@@ -46,6 +46,7 @@ export default defineAppConfig({
 			{ icon: 'ph:house-bold', text: '个人主页', url: blogConfig.author.homepage },
 			{ icon: 'ph:github-logo-bold', text: 'GitHub: Mugzx', url: 'https://github.com/Mugzx' },
 			{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
+			{ icon: 'ph:books-bold', text: 'OPML聚合', url: '/mugzx.opml' },
 			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/go.html' },
 		] satisfies NavItem[],
 		/** 页脚站点地图 */
@@ -70,7 +71,7 @@ export default defineAppConfig({
 				title: '信息',
 				items: [
 					{ icon: 'simple-icons:nuxtdotjs', text: `主题: Clarity-${version}`, url: 'https://github.com/L33Z22L11/blog-v3' },
-					{ icon: 'ph:hourglass-low-bold', text: 'Uptime站点监测', url: 'https://status.mugzx.top' },
+					{ icon: 'ph:hourglass-high-bold', text: 'Uptime站点监测', url: 'https://status.mugzx.top' },
 					{ icon: 'ph:certificate-bold', text: '萌备20259900号', url: 'https://icp.gov.moe/?keyword=20259900' },
 				],
 			},
