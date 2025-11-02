@@ -2,7 +2,7 @@
 title: Ungoogled Chromium 简单体验及配置
 description: 介绍 Ungoogled Chromium 的优势，分享安装方法及常用实验功能设置，替代原版 Google Chrome，提升隐私与使用体验。
 date: 2025-10-24 00:11:45
-updated: 2025-10-26 14:30:49
+updated: 2025-11-02 16:16:28
 categories: [分享]
 tags: [Chrome]
 references:
@@ -16,17 +16,21 @@ Google 的 Chrome 浏览器总是会在用户数据的路径中生成AI模型相
 
 :copy{prompt="Chrome" code="%LOCALAPPDATA%\Google\Chrome\User Data\OptGuideOnDeviceModel"}
 
-而这个东西无法通过`chrome://flags`实验特性管理将其关闭。当然，你也可以通过修改文件夹权限，注册表等操作阻止这个东西的生成，但我始终觉得不如换个浏览器来的好。
+而这个东西无法通过 `chrome://flags` 实验特性管理将其关闭。当然，你也可以通过修改文件夹权限，注册表等操作来限制这个东西的生成，但我始终觉得不如换个浏览器来的好。
 
 ## 来安装吧
 
-我推荐 Windows 系统使用 `scoop install ungoogled-chromium` 安装，在更新版本时比较方便。
+我推荐 Windows 系统使用 `scoop install ungoogled-chromium`{lang="sh"} 安装 Ungoogled Chromium，这在更新时比较方便。
 
-其余系统详见 [Downloads](https://github.com/ungoogled-software/ungoogled-chromium#downloads) 的说明内容。
+::quote
+也可自行探索另外的安装方式。
+::
+
+其余系统的安装流程详见 [Downloads](https://github.com/ungoogled-software/ungoogled-chromium#downloads) 的说明内容。
 
 ### Widevine DRM
 
-如果需要观看受版权保护的视频，则需要安装 Widevine DRM 组件。不过目前从 `dl.google.com` 安装组件的方式已经失效，Linux 可以使用社区维护的 Widevine DRM 组件，而其他系统仅推荐从文件路径中手动提取。
+观看受版权保护的视频需要安装 Widevine DRM 组件。不过目前从 `dl.google.com` 安装组件的方式已经失效，Linux 有社区维护的组件，而其他系统仅推荐从文件路径中手动提取。
 
 ## 功能配置
 
@@ -66,7 +70,7 @@ Ungoogled Chromium 的默认标签页仅显示快捷方式，修改新标签地�
 
 ## 书签同步
 
-使用 BookmarkHub 将你的书签上传至 GitHub Gist，随时同步数据。
+使用 [BookmarkHub](https://github.com/dudor/BookmarkHub) 将你的书签上传至 GitHub Gist，随时同步数据。
 
 ::quote
 快同步吧。
