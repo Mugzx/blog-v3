@@ -58,7 +58,7 @@ export default [
 				avatar: getGhAvatar('Steven-WZH'),
 				archs: ['Halo', 'Cloudflare'],
 				date: '2025-02-07',
-				comment: '分享折腾经历，目前文章停更。',
+				// comment: '分享折腾经历，目前文章停更。',
 
 			},
 			{
@@ -162,6 +162,18 @@ export default [
 				archs: ['Nuxt', '服务器'],
 				date: '2025-09-13',
 				comment: '技术参考',
+			},
+			{
+				author: 'Angine',
+				title: 'Angine\'s blog',
+				desc: 'By the power of language. | 以语言之力。',
+				feed: 'https://angine.tech/atom.xml',
+				link: 'https://blog.zhilu.site',
+				icon: getFavicon('angine.tech'),
+				avatar: getGhAvatar('angine04'),
+				archs: ['Hexo', '服务器'],
+				date: '2025-11-02',
+				comment: '文笔以及经验参考',
 			},
 		],
 	},
