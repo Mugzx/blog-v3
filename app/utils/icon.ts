@@ -8,6 +8,7 @@ const archIcons = {
 	'Cloudflare': 'simple-icons:cloudflare',
 	'Deno Deploy': 'simple-icons:deno',
 	'GitHub Pages': 'simple-icons:github',
+	'Golang': 'simple-icons:go',
 	'Gridea': 'tabler:square-rounded-letter-g-filled', // 不准确
 	'Halo': 'material-symbols:h-mobiledata-badge', // 不准确
 	'Hexo': 'simple-icons:hexo',
@@ -18,6 +19,7 @@ const archIcons = {
 	'Netlify': 'simple-icons:netlify',
 	'Next.js': 'simple-icons:nextdotjs',
 	'Nuxt': 'simple-icons:nuxtdotjs',
+	'PHP': 'simple-icons:php',
 	'Python': 'simple-icons:python',
 	'React': 'simple-icons:react',
 	'Typecho': 'icon-park-solid:align-text-left-one', // 不准确
@@ -25,7 +27,6 @@ const archIcons = {
 	'VitePress': 'simple-icons:vitepress',
 	'Vue': 'uim:vuejs',
 	'WordPress': 'simple-icons:wordpress',
-	'ZBlog': 'mynaui:letter-z-hexagon-solid', // 不准确
 	'Zebaur': 'tabler:square-letter-z-filled', // 不准确
 }
 
