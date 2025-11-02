@@ -168,7 +168,7 @@ export default [
 				title: 'Angine\'s blog',
 				desc: 'By the power of language. | 以语言之力。',
 				feed: 'https://angine.tech/atom.xml',
-				link: 'https://blog.zhilu.site',
+				link: 'https://angine.tech',
 				icon: getFavicon('angine.tech'),
 				avatar: getGhAvatar('angine04'),
 				archs: ['Hexo', '服务器'],
