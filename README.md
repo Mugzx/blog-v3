@@ -92,7 +92,7 @@ Mugzx's Blog于 2025 年 1 月 24 日重新上线。
 │   │   └── anti-mirror.ts # 恶意反代跳转
 │   └── routes # 根路由
 │       ├── atom.xml.get.ts # Atom 订阅源
-│       └── zhilu.opml.get.ts # OPML 订阅源聚合
+│       └── mugzx.opml.get.ts # OPML 订阅源聚合
 ├── blog.config.ts # 博客静态公共配置★
 ├── content.config.ts # Nuxt Content 配置
 ├── edgeone.json # EdgeOne 配置

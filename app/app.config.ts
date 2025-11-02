@@ -46,8 +46,8 @@ export default defineAppConfig({
 			{ icon: 'ph:house-bold', text: '个人主页', url: blogConfig.author.homepage },
 			{ icon: 'ph:github-logo-bold', text: 'GitHub: Mugzx', url: 'https://github.com/Mugzx' },
 			{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
-			{ icon: 'ph:books-bold', text: 'OPML聚合', url: '/mugzx.opml' },
-			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/go.html' },
+			{ icon: 'ph:books-bold', text: 'OPML聚合', url: 'https://blog.mugzx.top/mugzx.opml' },
+			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/plain.html' },
 		] satisfies NavItem[],
 		/** 页脚站点地图 */
 		nav: [
@@ -55,7 +55,7 @@ export default defineAppConfig({
 				title: '探索',
 				items: [
 					{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
-					{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/go.html' },
+					{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/plain.html' },
 					{ icon: 'ph:flying-saucer-bold', text: '异次元旅行', url: 'https://travel.moe/go.html?travel=on' },
 				],
 			},
