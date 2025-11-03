@@ -1,7 +1,5 @@
 import type { FeedEntry } from './app/types/feed'
 
-export { zhCN as dateLocale } from 'date-fns/locale/zh-CN'
-
 const basicConfig = {
 	title: 'Mugzx\'s Blog',
 	subtitle: '向上革命，向下实践。',
