@@ -36,7 +36,7 @@ const blogConfig = {
 			分享: { icon: 'ph:mouse-bold', color: '#7df' },
 			随笔: { icon: 'ph:shooting-star-bold', color: '#3af' },
 			哲学: { icon: 'ph:book-bookmark-bold', color: '#3af' },
-			编程: { icon: 'ph:code-bold', color: '#36f' },
+			代码: { icon: 'ph:code-bold', color: '#38f' },
 		},
 		defaultCategoryIcon: 'ph:folder-bold',
 		/** 文章版式，首个为默认版式 */

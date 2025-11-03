@@ -3,7 +3,7 @@ title: 为你的每一次 Commit 添加 SSH 签名
 description: 探索如何配置 SSH 签名，确保每次提交的身份验证，并解决常见的配置问题。
 date: 2025-09-13 11:30:35
 updated: 2025-09-14 22:03:53
-categories: [编程]
+categories: [代码]
 tags: [SSH]
 references:
   - title: 生成新的 SSH 密钥并将其添加到 ssh-agent - GitHub 文档
