@@ -40,8 +40,9 @@ Google 的 Chrome 浏览器总是会在用户数据的路径中生成AI模型相
 | - | - |
 | chrome://flags/#enable-parallel-downloading | Enabled |
 | chrome://flags/#enable-tab-audio-muting | Enabled |
+| chrome://flags/#side-by-side | Enabled - hide mini toolbar on active view |
 
-自带的实验功能我开启的不多，仅开启了多线程下载以及 :tip[控制单个标签页静音]{tip="参考 Microsoft Edge 和 Firefox 的标签页"} 的选项。
+开启多线程下载， :tip[控制单个标签页静音]{tip="参考 Microsoft Edge 和 Firefox 的标签页"} 和 :tip[左右分屏]{tip="还要在工具栏中显示按钮"}。
 
 ### 增强功能
 

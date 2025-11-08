@@ -34,7 +34,7 @@ export default [
 	},
 	{
 		name: '站友',
-		desc: '哔——啵——电波通讯中，欢迎常来串台～',
+		// desc: '哔——啵——电波通讯中，欢迎常来串台～',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
 			{
@@ -114,7 +114,7 @@ export default [
 	/* ========从此处新增友链======== */
 	{
 		name: '参考',
-		desc: '感谢热爱分享的每个人。',
+		// desc: '感谢热爱分享的每个人。',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
 			{
@@ -131,28 +131,6 @@ export default [
 				comment: '技术以及文笔参考（博客主题原作者）',
 			},
 			{
-				author: 'Alex John',
-				title: ' Alex John\'s Blog',
-				link: 'https://hdalex.top',
-				icon: 'https://hdalex.top/favicon.ico',
-				avatar: getGhAvatar('13RTK'),
-				archs: ['Nuxt', 'Cloudflare'],
-				date: '2025-07-26',
-				comment: '全栈路线参考',
-			},
-			{
-				author: 'Hans',
-				sitenick: '札记',
-				title: '计算机技术学习札记',
-				feed: 'https://www.criwits.top/index.xml',
-				link: 'https://www.criwits.top',
-				icon: 'https://www.criwits.top/images/favicon.ico',
-				avatar: getGhAvatar('criwits'),
-				archs: ['Hugo', '国内 CDN'],
-				date: '2025-08-02',
-				comment: '文笔以及电脑使用参考',
-			},
-			{
 				author: '月空人',
 				desc: '偶尔写些博客，发发牢骚',
 				feed: 'https://www.whbbit.cn/atom.xml',
@@ -162,18 +140,6 @@ export default [
 				archs: ['Nuxt', '服务器'],
 				date: '2025-09-13',
 				comment: '技术参考',
-			},
-			{
-				author: 'Angine',
-				title: 'Angine\'s blog',
-				desc: 'By the power of language. | 以语言之力。',
-				feed: 'https://angine.tech/atom.xml',
-				link: 'https://angine.tech',
-				icon: getFavicon('angine.tech'),
-				avatar: getGhAvatar('angine04'),
-				archs: ['Hexo', '服务器'],
-				date: '2025-11-02',
-				comment: '文笔以及经验参考',
 			},
 		],
 	},
