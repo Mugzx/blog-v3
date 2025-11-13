@@ -26,6 +26,7 @@ const archIcons = {
 	'Vercel': 'simple-icons:vercel',
 	'VitePress': 'simple-icons:vitepress',
 	'Vue': 'uim:vuejs',
+	'VuePress': 'uim:vuejs',
 	'WordPress': 'simple-icons:wordpress',
 	'Zebaur': 'tabler:square-letter-z-filled', // 不准确
 }

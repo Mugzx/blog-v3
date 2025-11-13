@@ -2,6 +2,7 @@ import type { FeedGroup } from '~/types/feed'
 import { getFavicon, getGhAvatar, getGhIcon, getQqAvatar, QqAvatarSize } from './utils/img'
 
 export default [
+	// #region 相谈甚多
 	{
 		name: '相谈甚多',
 		desc: '',
@@ -32,6 +33,7 @@ export default [
 			},
 		],
 	},
+	// #region 站友
 	{
 		name: '站友',
 		// desc: '哔——啵——电波通讯中，欢迎常来串台～',
@@ -112,6 +114,7 @@ export default [
 		],
 	},
 	/* ========从此处新增友链======== */
+	// #region 参考
 	{
 		name: '参考',
 		// desc: '感谢热爱分享的每个人。',
