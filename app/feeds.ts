@@ -111,6 +111,18 @@ export default [
 				date: '2025-08-28',
 				comment: '记录生活实况，折腾博客主题。',
 			},
+			{
+				author: '皓然',
+				sitenick: '小站',
+				title: '皓然小站',
+				desc: '分享生活和技术的点滴',
+				link: 'https://blog.horonlee.com',
+				icon: 'https://bu.dusays.com/2023/02/05/63dfc7f2ced91.png',
+				avatar: getGhAvatar('horonlee'),
+				archs: ['Vue', '国内 CDN'],
+				date: '2025-11-14',
+				// comment: '',
+			},
 		],
 	},
 	/* ========从此处新增友链======== */
