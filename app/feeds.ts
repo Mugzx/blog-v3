@@ -33,6 +33,7 @@ export default [
 			},
 		],
 	},
+	// #endregion
 	// #region 站友
 	{
 		name: '站友',
@@ -117,6 +118,7 @@ export default [
 				title: '皓然小站',
 				desc: '分享生活和技术的点滴',
 				link: 'https://blog.horonlee.com',
+				feed: 'https://blog.horonlee.com/atom.xml',
 				icon: 'https://bu.dusays.com/2023/02/05/63dfc7f2ced91.png',
 				avatar: getGhAvatar('horonlee'),
 				archs: ['Vue', '国内 CDN'],
@@ -126,6 +128,7 @@ export default [
 		],
 	},
 	/* ========从此处新增友链======== */
+	// #endregion
 	// #region 参考
 	{
 		name: '参考',
@@ -158,4 +161,5 @@ export default [
 			},
 		],
 	},
+	// #endregion
 ] satisfies FeedGroup[]
