@@ -1,0 +1,31 @@
+name: Bing URL Submission
+
+on:
+  schedule:
+    # 每天 UTC 时间 00:00 执行（北京时间 08:00）
+    - cron: '0 0 * * *'
+  # 允许手动触发
+  workflow_dispatch:
+
+jobs:
+  submit-urls:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.x'
+        
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install requests
+        
+    - name: Run Bing submission script
+      env:
+        BING_API_KEY: ${{ secrets.BING_API_KEY }}
+      run: python bing_submission.py
