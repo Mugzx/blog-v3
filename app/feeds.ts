@@ -1,4 +1,5 @@
 import type { FeedGroup } from '~/types/feed'
+// npm 脚本需要显式添加导入
 import { getFavicon, getGhAvatar, getGhIcon, getQqAvatar, QqAvatarSize } from './utils/img'
 
 export default [
