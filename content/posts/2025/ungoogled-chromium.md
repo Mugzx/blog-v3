@@ -69,7 +69,7 @@ Ungoogled Chromium 不依赖于 Google 的网络服务。它在继承使用体�
 
 Ungoogled Chromium 的默认标签页仅显示快捷方式，修改新标签地址就可以用回原来的搜索页啦。
 
-## 书签同步
+### 书签同步
 
 使用 [BookmarkHub](https://github.com/dudor/BookmarkHub) 将你的书签上传至 GitHub Gist，随时同步数据。
 

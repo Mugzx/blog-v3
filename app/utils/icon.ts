@@ -154,6 +154,7 @@ const ext2lang: Record<string, string> = {
 	'bat': 'catppuccin:batch',
 	'c': 'catppuccin:c',
 	'c++': 'catppuccin:cpp',
+	'conf': 'catppuccin:properties',
 	'cpp': 'catppuccin:cpp',
 	'css': 'catppuccin:css',
 	'diff': 'catppuccin:diff',
