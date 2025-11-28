@@ -3,9 +3,10 @@ title: Arch Linux 安装记录
 description: 文章记录了手动安装 Arch Linux 过程中一些问题的解决方法以及基础的系统美化，以便快速上手。
 date: 2025-11-23 19:59:22
 updated: 2025-11-28 23:15:52
-# image:
+image: https://mu-s4.s3.bitiful.net/2025/11/28.avif?!style=1
 categories: [随笔]
-tags: [Archlinux, 指南]
+tags: [Arch, Linux, 指南]
+recommend: true
 ---
 
 ::timeline
