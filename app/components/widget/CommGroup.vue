@@ -1,5 +1,5 @@
 <template>
-<ZWidget
+<BlogWidget
 	card
 	dim
 	title="MC/杂谈社区"
@@ -13,7 +13,7 @@
 	<Tip copy :icon="false" :tip-options="{ placement: 'left' }">
 		<Icon name="ri:qq-fill" />938973313
 	</Tip>
-</ZWidget>
+</BlogWidget>
 </template>
 
 <style lang="scss" scoped>

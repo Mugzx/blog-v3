@@ -58,11 +58,13 @@ Mugzx's Blog于 2025 年 1 月 24 日重新上线。
 ├── app # 前端
 │   ├── assets # 资源文件
 │   ├── components # 组件
+│   │   ├── blog # 博客布局组件
 │   │   ├── content # MDC组件
 │   │   ├── partial # 微型组件
-│   │   ├── widget # 侧边栏组件
-│   │   ├── zhilu # 个人标识组件
-│   │   └── ... # 布局组件
+│   │   ├── popover # 弹窗组件
+│   │   ├── post # 文章组件
+│   │   ├── util # 功能组件
+│   │   └── widget # 侧栏小组件
 │   ├── composables # Vue 组合式函数
 │   ├── pages # 页面
 │   │   ├── [...slug].vue # 正文、404页面
@@ -95,7 +97,6 @@ Mugzx's Blog于 2025 年 1 月 24 日重新上线。
 ├── server # 服务端
 │   ├── api # 接口
 │   │   └── stats.get.ts # 博客静态统计
-│   ├── plugins # Nitro 插件
 │   └── routes # 根路由
 │       ├── atom.xml.get.ts # Atom 订阅源
 │       └── zhilu.opml.get.ts # OPML 订阅源聚合
@@ -165,7 +166,6 @@ pnpm preview
 
 - Vercel 先前创建的项目需要 [手动指定 pnpm 10](https://vercel.com/docs/builds/configure-a-build#corepack)。
 - Netlify 需要关闭 Build & deploy settings - Post processing - Pretty URLs，否则会导致 404 错误。
-- EdgeOne 在 2025年11月20日 开始需要使用 `NITRO_PRESET=static nuxt generate` 构建命令。
 - 如果修改了 API 路径，使用 EdgeOne 部署需要同步修改 `edgeone.json`。
 - 运行、部署项目时 Node.js 版本需要高于 `22.15.0`。
 
