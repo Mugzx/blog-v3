@@ -38,7 +38,7 @@ export default [
 	// #region 站友
 	{
 		name: '站友',
-		// desc: '哔——啵——电波通讯中，欢迎常来串台～',
+		// desc: '',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
 			{
@@ -62,7 +62,7 @@ export default [
 				avatar: getGhAvatar('Steven-WZH'),
 				archs: ['Halo', 'Cloudflare'],
 				date: '2025-02-07',
-				// comment: '分享折腾经历，目前文章停更。',
+				comment: 'MC爱好者，分享折腾经历。',
 
 			},
 			{
@@ -124,7 +124,7 @@ export default [
 				avatar: getGhAvatar('horonlee'),
 				archs: ['Vue', '国内 CDN'],
 				date: '2025-11-14',
-				// comment: '',
+				comment: 'Go语言学习，主修计算机科学。',
 			},
 		],
 	},
@@ -133,7 +133,7 @@ export default [
 	// #region 参考
 	{
 		name: '参考',
-		// desc: '感谢热爱分享的每个人。',
+		// desc: '',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
 			{
