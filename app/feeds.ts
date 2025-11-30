@@ -1,5 +1,5 @@
-import type { FeedGroup } from '~/types/feed'
-// npm 脚本需要显式添加导入
+// 友链检测 CLI 需要使用显式导入和相对路径
+import type { FeedGroup } from '../app/types/feed'
 import { getFavicon, getGhAvatar, getGhIcon, getQqAvatar, QqAvatarSize } from './utils/img'
 
 export default [
@@ -54,7 +54,7 @@ export default [
 			},
 			{
 				author: 'Steven',
-				title: 'Steven\'s Blog',
+				title: 'Steven的博客',
 				desc: '没有既定的终点，只有无限的探索',
 				link: 'https://blog.stevenw.cc',
 				feed: 'https://blog.stevenw.cc/rss.xml',
@@ -90,12 +90,12 @@ export default [
 				comment: '这是怕坛大妈，KLPBBS的草级版主。',
 			},
 			{
-				author: 'Adpro',
-				title: 'AdproのBlog',
-				desc: 'Adpro的Blog，可能有有用的东西？',
+				author: 'Aone',
+				title: 'AoneのBlog',
+				desc: 'AoneのBlog，可能有有用的东西？',
 				link: 'https://blog.adproqwq.top',
 				feed: 'https://blog.adproqwq.top/atom.xml',
-				icon: 'https://weavatar.com/avatar/4a26406a570f6a31ca7ab85ee47b74bc471e92aeb67cd346ad7e9d9423091617?s=32',
+				icon: getFavicon('blog.adproqwq.top'),
 				avatar: getGhAvatar('adproqwq'),
 				archs: ['Vue', 'Vercel'],
 				date: '2025-07-25',
