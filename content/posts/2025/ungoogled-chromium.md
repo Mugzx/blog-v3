@@ -16,7 +16,7 @@ Google 的 Chrome 浏览器总是会在用户数据的路径中生成AI模型相
 
 :copy{prompt="Chrome" code="%LOCALAPPDATA%\Google\Chrome\User Data\OptGuideOnDeviceModel"}
 
-而这个东西无法通过 `chrome://flags` 实验特性管理将其关闭。当然，你也可以通过修改文件夹权限，注册表等操作来限制这个东西的生成，但我始终觉得不如换个浏览器来的好。
+而这个东西无法通过 `chrome://flags` 实验特性管理将其关闭。当然，你也可以通过修改文件夹权限，注册表等操作来限制这个东西的生成，但我始终觉得不如 :tip[换个浏览器来的好]{tip="其实是当时的Mugzx把谷歌账号搞没了🫠"}。
 
 ## 来安装吧
 

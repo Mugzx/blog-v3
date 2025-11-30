@@ -3,10 +3,10 @@ import type { FeedGroup } from '~/types/feed'
 import { getFavicon, getGhAvatar, getGhIcon, getQqAvatar, QqAvatarSize } from './utils/img'
 
 export default [
-	// #region Clarity
+	// #region 相谈甚多
 	{
-		name: 'Clarity',
-		desc: '使用本博客主题构建的网站',
+		name: '相谈甚多',
+		desc: '',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
 			{
