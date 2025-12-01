@@ -175,17 +175,17 @@ log.info(`✅ 已创建: ${path.resolve(mdPath)}`)
 if (permalink)
 	log.info(`🔗 文章链接: ${new URL(permalink, blogConfig.url)}`)
 
-// #region 打开 VS Code
+// #region 打开 VSCodium
 const s = spinner()
-s.start('正在打开 VS Code...')
-exec(`code "${mdPath}"`, (error) => {
+s.start('正在打开 VSCodium...')
+exec(`codium "${mdPath}"`, (error) => {
 	if (!error)
 		return
-	s.stop('⚠️ 无法打开 VS Code，请确认已通过命令面板注册 code 命令到 PATH')
+	s.stop('⚠️ 无法打开 VSCodium，请确认已通过命令面板注册 codium 命令到 PATH')
 	log.error(error.message)
 	process.exit(1)
 })
-s.stop('⌨ 已通过 VS Code 打开文件')
+s.stop('⌨ 已通过 VSCodium 打开文件')
 // #endregion
 
 outro(`🎉 开始书写吧！`)
