@@ -52,7 +52,7 @@ export default defineAppConfig({
 			{ icon: 'ph:house-bold', text: '个人主页', url: blogConfig.author.homepage },
 			{ icon: 'ph:github-logo-bold', text: 'GitHub: Mugzx', url: 'https://github.com/Mugzx' },
 			{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
-			// { icon: 'ph:books-bold', text: 'OPML聚合', url: '/zhilu.opml' },
+			{ icon: 'ph:books-bold', text: 'OPML聚合', url: `${blogConfig.url}/zhilu.opml` },
 			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/plain.html' },
 		] satisfies NavItem[],
 		/** 页脚站点地图 */
