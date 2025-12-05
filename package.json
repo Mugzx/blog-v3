@@ -14,7 +14,7 @@
     "clean": "rimraf .data node_modules/.cache",
     "build:packages": "pnpm -r --filter ./packages/* build",
     "dev": "nuxt dev --open",
-    "dev:host": "nuxt dev --host",
+    "dev:host": "nuxt dev --public",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
