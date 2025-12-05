@@ -6,7 +6,7 @@ export default [
 	// #region 相谈甚多
 	{
 		name: '相谈甚多',
-		desc: '',
+		// desc: '',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
 			{
@@ -26,7 +26,7 @@ export default [
 				desc: '和你的日常，就是奇迹',
 				link: 'https://blog.feng1026.top',
 				feed: 'https://blog.feng1026.top/rss.xml',
-				icon: 'https://blog.feng1026.top/favicon/favicon.png',
+				icon: 'https://unavatar.webp.se/duckduckgo/www.feng1026.top?width=32',
 				avatar: getGhAvatar('Qiufengluoyes'),
 				archs: ['Astro', 'Vercel'],
 				date: '2025-01-24',
@@ -35,9 +35,9 @@ export default [
 		],
 	},
 	// #endregion
-	// #region 站友
+	// #region 朋友
 	{
-		name: '站友',
+		name: '朋友们',
 		// desc: '',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
