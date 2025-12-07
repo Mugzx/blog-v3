@@ -7,6 +7,10 @@ categories: [分享]
 tags: [存储]
 ---
 
+::alert{type="warning"}
+本文具有时效性，开通的方法可能会失效🫠。
+::
+
 2025年8月4日凌晨时分，LineXic 建图床，遂见之，些许缓慢。
 
 ::chat

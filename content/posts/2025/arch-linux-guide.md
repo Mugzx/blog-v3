@@ -23,11 +23,13 @@ recommend: true
 
 我是根据 [archlinux 简明指南](https://arch.icekylin.online/guide/rookie/basic-install.html) 安装的系统，它的系统安装详解部分对一些步骤进行了更详细的解释，推荐阅读。
 
-我是在不同硬盘中安装的 Arch Linux，这样可以 :tip[更安全]{tip="随便折腾不怕把原来 Windows 系统搞坏～"} 地折腾。
+你可以在不同硬盘中安装的 Arch Linux，这样可以 :tip[更安全]{tip="随便折腾不怕把原来 Windows 系统搞坏～"} 地折腾😘。
 
 ### Ventoy 的启动模式
 
-U盘安装 Ventoy 启动并进行系统安装，以 :tip[Boot in normal mode]{tip="以正常模式启动"} 可能会在最后因为分区损坏从而无法进入系统，请选择 :tip[Boot in grub2 mode]{tip="以 grub2 模式启动"}。
+U盘安装 Ventoy 启动并进行系统安装，如果 :tip[以正常模式启动]{tip="Boot in normal mode"} 安装，但无法进入系统的话。
+
+你可以尝试选择 :tip[以 grub2 模式启动]{tip="Boot in grub2 mode"}。
 
 :quote[也许可以先选择 EndeavourOS 试试水？]
 
