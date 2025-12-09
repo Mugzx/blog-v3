@@ -1,6 +1,6 @@
 ---
 title: Cloudflare R2 对象存储
-description: 关于 Cloudflare R2 的开通，以及需要进行的一些配置和说明，谨记切勿过分滥用，用作违法之行径。
+description: 关于 Cloudflare R2 的开通，以及需要进行的一些配置和说明。
 date: 2025-08-04 13:05:10
 updated: 2025-08-27 00:52:29
 categories: [分享]
@@ -8,7 +8,7 @@ tags: [存储]
 ---
 
 ::alert{type="warning"}
-本文具有时效性，开通的方法可能会失效🫠。
+本文具有时效性 :emoji-clock{datetime="2025-08-04 13:05:10"}，开通的方法可能会失效🫠。
 ::
 
 2025年8月4日凌晨时分，LineXic 建图床，遂见之，些许缓慢。

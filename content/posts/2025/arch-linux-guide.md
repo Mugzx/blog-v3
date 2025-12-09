@@ -54,13 +54,12 @@ U盘安装 Ventoy 启动并进行系统安装，如果 :tip[以正常模式启�
 
 Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip[兼容问题]{tip="比如以 pcieport 为开头的报错信息"}。
 
-```bash
-vim /etc/default/grub
-```
+:copy{lang="zsh" code="vim /etc/default/grub"}
 
-如果这个报错信息影响了你输入命令的话，可以在 `GRUB_CMDLINE_LINUX` 中添加 `pci=noaer`，禁用这个报错信息，除此之外，还需要添加其它参数。
+如果这个报错信息影响了你输入命令的话，可以在 `GRUB_CMDLINE_LINUX` 中添加 `pci=noaer`，禁用这个报错信息，除此之外，还需要添加grub的引导参数。
 
-- win10 需要添加 `GRUB_DISABLE_OS_PROBER=false`，不过 win11 并不需要。
+- Windows10 需要添加 `GRUB_DISABLE_OS_PROBER=false` :blur[而 Windows11 ~~不~~需要。]
+  - **（可选）** 选择 rEFind 进行引导则不添加。
 
 - 英特尔的硬件请在 `GRUB_CMDLINE_LINUX_DEFAULT` 中添加 `modprobe.blacklist=iTCO_wdt` 而不是 `nowatchdog`。
 
@@ -72,7 +71,6 @@ vim /etc/default/grub
 "Boot with standard options"  "root=UUID=d69d9dc3-141c-495c-a6fc-fa6b8d3f4991 rw rootflags=subvol=@ pci=noaer loglevel=5 modprobe.blacklist=iTCO_wdt initrd=intel-ucode.img initrd=initramfs-%v.img"
 "Boot to single-user mode"    "root=UUID=d69d9dc3-141c-495c-a6fc-fa6b8d3f4991 rw rootflags=subvol=@ pci=noaer loglevel=5 modprobe.blacklist=iTCO_wdt initrd=intel-ucode.img initrd=initramfs-%v.img single"
 "Boot with minimal options"   "ro root=UUID=d69d9dc3-141c-495c-a6fc-fa6b8d3f4991"
-
 ```
 
 对你来讲，内核参数的路径也许并不需要`@\boot\`的前缀，直接填写文件名即可。
@@ -81,10 +79,8 @@ vim /etc/default/grub
 
 ### 字体
 
-```bash
-pacman -S noto-fonts noto-fonts-emoji noto-fonts-extra noto-fonts-cjk
-pacman -S ttf-jetbrains-mono-nerd
-```
+:copy{lang="zsh" code="pacman -S noto-fonts noto-fonts-emoji noto-fonts-extra noto-fonts-cjk"}
+:copy{lang="zsh" code="pacman -S ttf-jetbrains-mono-nerd"}
 
 调整所有字体为 Noto Sans 12pt，等宽字体设置为 JetBrainsMonoNL Nerd Font，大小同样为12pt。
 
