@@ -69,7 +69,7 @@ const blogConfig = {
 	/** 向 <head> 中添加脚本 */
 	scripts: [
 		// 自己部署的 Umami 统计服务
-		{ 'src': 'https://umami.mugzx.top/script.js', 'data-website-id': '67b04aa0-edac-456d-bbe1-7ddd2bff9008', 'defer': true },
+		{ 'src': 'https://umami.mugzx.top/script.js', 'data-website-id': '72edd2a1-7693-4358-a0ba-2ab921697144', 'defer': true },
 		// Twikoo 评论系统
 		{ src: 'https://s4.zstatic.net/ajax/libs/twikoo/1.6.44/twikoo.min.js', defer: true },
 	],

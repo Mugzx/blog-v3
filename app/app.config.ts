@@ -77,7 +77,7 @@ export default defineAppConfig({
 				title: '信息',
 				items: [
 					{ icon: 'simple-icons:nuxtdotjs', text: `主题: Clarity-${version}`, url: 'https://github.com/L33Z22L11/blog-v3' },
-					{ icon: 'ph:hourglass-high-bold', text: 'Umami数据统计', url: 'https://umami.mugzx.top/share/4bNO64q686B6Ij2T' },
+					{ icon: 'ph:hourglass-high-bold', text: 'Umami数据统计', url: 'https://umami.mugzx.top/share/L9FxKfmT6aulBfWe' },
 					{ icon: 'ph:certificate-bold', text: '萌备20259900号', url: 'https://icp.gov.moe/?keyword=20259900' },
 				],
 			},
