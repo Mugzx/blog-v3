@@ -2,7 +2,7 @@
 title: Arch Linux 安装记录
 description: 文章记录了手动安装 Arch Linux 过程中一些问题的解决方法以及基础的系统美化，以便快速上手。
 date: 2025-11-23 19:59:22
-updated: 2025-11-28 23:15:52
+updated: 2025-12-09 12:28:52
 image: https://mu-s4.s3.bitiful.net/2025/11/28.avif?!style=1
 categories: [随笔]
 tags: [Arch, Linux, 指南]
@@ -31,17 +31,34 @@ U盘安装 Ventoy 启动并进行系统安装，如果 :tip[以正常模式启�
 
 你可以尝试选择 :tip[以 grub2 模式启动]{tip="Boot in grub2 mode"}。
 
-:quote[也许可以先选择 EndeavourOS 试试水？]
+:quote[也许可以先选择 Live ISO？]
+
+担心兼容问题可以尝试先用 EndeavourOS、Fedora 等发行版临时运行一个操作系统来进行测试。
 
 ### 引导与参数
 
-我的无线网卡 intel 3165AC 貌似与 Linux 有一些兼容问题，比如以`pcieport`为开头的报错信息。
+::chat
+{:省略了很多聊天记录…}
+
+{.Mugzx}
+
+［一张关于报错信息的图片］
+
+{Pinpe}
+
+🤔
+
+可能是驱动/硬件问题？
+
+::
+
+Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip[兼容问题]{tip="比如以 pcieport 为开头的报错信息"}。
 
 ```bash
 vim /etc/default/grub
 ```
 
-在`GRUB_CMDLINE_LINUX`中添加`pci=noaer`，禁用这个报错信息，除此之外，还需要添加其它参数。
+如果这个报错信息影响了你输入命令的话，可以在 `GRUB_CMDLINE_LINUX` 中添加 `pci=noaer`，禁用这个报错信息，除此之外，还需要添加其它参数。
 
 - win10 需要添加 `GRUB_DISABLE_OS_PROBER=false`，不过 win11 并不需要。
 
@@ -73,15 +90,17 @@ pacman -S ttf-jetbrains-mono-nerd
 
 ### 窗口
 
-窗口可以在显示和监视器-显示器配置中调整屏幕缩放率，推荐为100%或125%。
+窗口可以在显示和监视器-显示器配置中调整屏幕缩放率，推荐为100%或120%，只要舒服即可。
 
 在颜色和主题-窗口装饰元素中可以调整右上角的窗口按钮大小，推荐设置为中等。
 
 #### 桌面特效
 
-这里参考了[我的KDE自定义设置#桌面特效](https://github.com/SHORiN-KiWATA/ShorinArchExperience-ArchlinuxGuide/wiki/%E6%88%91%E7%9A%84KDE%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AE%BE%E7%BD%AE#%E6%A1%8C%E9%9D%A2%E7%89%B9%E6%95%88)。
+这里参考了[SHORiN-KiWATA/ShorinArchExperience-ArchlinuxGuide](https://github.com/SHORiN-KiWATA/ShorinArchExperience-ArchlinuxGuide/wiki/)。
 
-可以使用`yay -S kwin-effect-rounded-corners-git`{lang="sh"}设置圆角。
+:copy{lang="zsh" code="yay -S kwin-effect-rounded-corners-git"}
+
+安装 KDE-Rounded-Corners 以设置圆角。
 
 ### 面板配置
 

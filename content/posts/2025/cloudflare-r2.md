@@ -25,7 +25,7 @@ tags: [存储]
 
 突感好奇，如何解决绑卡之难事？
 
-## Cloudflare R2 不必绑卡
+## 不必绑卡
 
 ::chat
 {:2025-08-04 00:26}
@@ -141,10 +141,3 @@ https://<ZONE>/cdn-cgi/image/<OPTIONS>/<SOURCE-IMAGE>
 - [缓存配置](https://cloud.tencent.com/document/product/1552/94478)
 ::
 
-## 感谢 Cloudflare
-
-::quote
-至此，图床配置完成。
-::
-
-此 Cloudflare 之 Bug 不止于 R2，切勿过分滥用，用作违法之行径。

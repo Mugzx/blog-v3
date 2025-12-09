@@ -2,7 +2,7 @@
 title: Ungoogled Chromium 简单体验及配置
 description: 介绍 Ungoogled Chromium 的优势，分享安装方法及常用实验功能设置，替代原版 Google Chrome，提升隐私与使用体验。
 date: 2025-10-24 00:11:45
-updated: 2025-11-02 16:16:28
+updated: 2025-12-09 12:51:52
 categories: [分享]
 tags: [Chrome, Ungoogled Chromium ]
 references:
@@ -20,7 +20,11 @@ Google 的 Chrome 浏览器总是会在用户数据的路径中生成AI模型相
 
 ## 来安装吧
 
-我推荐 Windows 系统使用 `scoop install ungoogled-chromium`{lang="sh"} 安装 Ungoogled Chromium，这在更新时比较方便。
+:copy{lang="sh" prompt="PS>" code="scoop bucket add extras"}
+
+:copy{lang="sh" prompt="PS>" code="scoop install ungoogled-chromium"}
+
+我推荐 Windows 系统使用 Scoop 安装 Ungoogled Chromium，这在更新时比较方便。
 
 ::quote
 也可自行探索另外的安装方式。
@@ -55,7 +59,7 @@ Ungoogled Chromium 不依赖于 Google 的网络服务。它在继承使用体�
 | chrome://flags/#scroll-tabs | Always |
 | chrome://flags/#keep-old-history | Enabled |
 
-始终提示安装扩展，仅打开访客和无痕式窗口时显示头像，滚轮滚动切换标签页，以及保留三个月内的历史记录。
+始终提示安装扩展，仅打开访客和无痕式窗口时显示头像，使用滚轮切换标签页，以及保留三个月内的历史记录。
 
 ::alert
 安装扩展还需要搭配 [Chromium Web Store](https://github.com/NeverDecaf/chromium-web-store/releases) 使用。
