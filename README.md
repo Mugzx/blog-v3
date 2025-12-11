@@ -7,7 +7,7 @@
 [![代码风格](https://img.shields.io/badge/代码风格-ESLint-4B32C3?logo=ESLint)](https://eslint.org/)
 [![代码风格](https://img.shields.io/badge/代码风格-Stylelint-263238?logo=Stylelint)](https://stylelint.io/)
 
-Mugzx's Blog于 2025 年 1 月 24 日重新上线。
+Mugzx's Blog 于 2025 年 1 月 24 日重新上线。
 
 > [!CAUTION]
 > - 部署前必须完成项目个性化配置与内容修改，不得将我的信息用于你的网站图标/名称，严禁将项目内我的文章以你的名义重新发布至公开环境。
@@ -50,7 +50,7 @@ Mugzx's Blog于 2025 年 1 月 24 日重新上线。
 | [鹊楠の小窝](https://blog.quenan.cn/)        | QNquenan       | v3.4.9       |                                              |
 | [KingKangBlog](https://blog.kingkang.xyz/)   | KingStoning    | v3.4.9       |                                              |
 | [阿黄说](https://ayellowdogsays.cn/)         | ayellowdogsays | v3.5.0       |                                              |
-| [Cizai](https://wl.do/)                      | Cizai          | v3.5.1       |                                              |
+| [Cizai](https://blog.wl.do/)                 | Cizai          | v3.5.1       |                                              |
 | [林间拾语](https://www.xhhao.com/)           | acanyo         | Halo         | https://www.halo.run/store/apps/app-jglhpodw |
 
 ## 特性
