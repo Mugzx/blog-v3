@@ -138,6 +138,17 @@ export default [
 				date: '2025-12-04',
 				comment: '博客主题有特色，正在学习Go语言。',
 			},
+			{
+				author: 'Honesty',
+				desc: '花有重开日，人无再少年',
+				link: 'https://blog.hehouhui.cn/',
+				feed: 'https://blog.hehouhui.cn/rss/feed.xml',
+				icon: 'https://blog.hehouhui.cn/favicon.ico',
+				avatar: 'https://www.hehouhui.cn/images/avatar.jpeg',
+				archs: ['NotionNext', 'Netlify'],
+				date: '2025-12-12',
+				comment: 'Java 后端技术栈、AI 实战、博客搭建与生活随笔，',
+			},
 		],
 	},
 	/* ========从此处新增友链======== */
