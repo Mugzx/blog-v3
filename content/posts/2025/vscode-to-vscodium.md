@@ -14,7 +14,7 @@ references:
 
 ## 认识
 
-我是从 [编程软件 | archlinux 简明指南](https://arch.icekylin.online/app/exclusive/code.html) 认识的 VSCodium，与 VSCode 相比去除了遥测功能，并使用 OpenVSX 这个开源的扩展插件市场，仅此而已。
+VSCodium 与 VSCode 相比去除了遥测功能，并使用 OpenVSX 这个开源的扩展插件市场。
 
 ## 迁移
 

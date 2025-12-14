@@ -2,11 +2,16 @@
 title: Arch Linux 安装记录
 description: 文章记录了手动安装 Arch Linux 过程中一些问题的解决方法以及基础的系统美化，以便快速上手。
 date: 2025-11-23 19:59:22
-updated: 2025-12-09 12:28:52
+updated: 2025-12-14 22:08:52
 image: https://mu-s4.s3.bitiful.net/2025/11/28.avif?!style=1
 categories: [随笔]
 tags: [Arch, Linux, 指南]
 recommend: true
+references:
+  - title: archlinux 简明指南
+    link: https://arch.icekylin.online/guide/rookie/basic-install
+  - title: Home · SHORiN-KiWATA/ShorinArchExperience-ArchlinuxGuide Wiki
+    link: https://github.com/SHORiN-KiWATA/ShorinArchExperience-ArchlinuxGuide/wiki
 ---
 
 ::timeline
@@ -21,15 +26,11 @@ recommend: true
 
 ## 基于简明指南的注意事项
 
-我是根据 [archlinux 简明指南](https://arch.icekylin.online/guide/rookie/basic-install.html) 安装的系统，它的系统安装详解部分对一些步骤进行了更详细的解释，推荐阅读。
-
 你可以在不同的硬盘中安装 Arch Linux，这样可以 :tip[更安全]{tip="随便折腾不怕把原来 Windows 系统搞坏～"} 地折腾😘。
 
 ### Ventoy 的启动模式
 
-U盘安装 Ventoy 启动并进行系统安装，如果 :tip[以正常模式启动]{tip="Boot in normal mode"} 安装，但无法进入系统的话。
-
-你可以尝试选择 :tip[以 grub2 模式启动]{tip="Boot in grub2 mode"}。
+如果 :tip[以正常模式启动]{tip="Boot in normal mode"} 安装但无法进入系统的话，可以试试 :tip[以 grub2 模式启动]{tip="Boot in grub2 mode"}。
 
 :quote[也许可以先选择 Live ISO？]
 
@@ -79,10 +80,10 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 
 ### 字体
 
-:copy{lang="zsh" code="pacman -S noto-fonts noto-fonts-emoji noto-fonts-extra noto-fonts-cjk"}
-:copy{lang="zsh" code="pacman -S ttf-jetbrains-mono-nerd"}
+:copy{lang="zsh" code="sudo pacman -S noto-fonts noto-fonts-emoji ttf-sarasa-gothic"}
+:copy{lang="zsh" code="sudo pacman -S ttf-jetbrains-mono-nerd"}
 
-调整所有字体为 Noto Sans 12pt，等宽字体设置为 JetBrainsMonoNL Nerd Font，大小同样为12pt。
+调整所有字体为 Sans Serif 12pt，等宽字体设置为 Monospace，大小同样为12pt。
 
 ### 窗口
 
@@ -90,9 +91,7 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 
 在颜色和主题-窗口装饰元素中可以调整右上角的窗口按钮大小，推荐设置为中等。
 
-#### 桌面特效
-
-这里参考了[SHORiN-KiWATA/ShorinArchExperience-ArchlinuxGuide](https://github.com/SHORiN-KiWATA/ShorinArchExperience-ArchlinuxGuide/wiki/)。
+### 桌面特效
 
 :copy{lang="zsh" code="yay -S kwin-effect-rounded-corners-git"}
 
@@ -106,3 +105,50 @@ src: https://mu-s4.s3.bitiful.net/2025/11/28-one.avif?!style=1
 caption: 仿 Windows11 布局
 ---
 ::
+
+这是我的 KDE Plasma 的配置，可以参考看看。
+
+## 尝试更多
+
+了解完 Linux 的基本知识，也许就可以开始尝试更多桌面环境了？
+
+:quote[比如niri、Hyprland。]
+
+安装部分可以查看参考链接内的内容，按步骤安装即可。需要注意的就是**安装前创建快照**与**具体问题具体分析**。
+
+## 软件
+
+### 透明代理
+
+:copy{lang="zsh" code="sudo pacman -S daed"}
+:copy{lang="zsh" code="sudo systemctl enable --now daed"}
+
+### VSCodium
+
+:copy{lang="zsh" code="yay -S vscodium-bin"}
+
+::link-card
+---
+icon: 
+title: 从 VSCode 到 VSCodium
+description: 一款完全开源的代码编辑器替代方案，轻松从 VSCode 迁移到 VSCodium，享受去遥测的纯净开发体验。
+link: /2025/vscode-to-vscodium
+---
+::
+
+### rEFInd-glassy
+
+::pic
+---
+src: https://mu-s4.s3.bitiful.net/2025/11/28-two.avif?!style=1
+caption: A minimalistic rEFInd theme
+---
+::
+
+[Pr0cella/rEFInd-glassy](https://github.com/Pr0cella/rEFInd-glassy) 是一个极简，扁平化风格的 rEFInd 主题。
+
+:copy{lang="zsh" code="mkdir /boot/EFI/refind/themes"}
+:copy{lang="zsh" code="git clone https://github.com/Pr0cella/rEFInd-glassy.git"}
+:copy{lang="zsh" code="vim /boot/EFI/refind/refind.conf"}
+
+编辑器打开 refind.conf，找个合适的位置添加 `include themes/rEFInd-glassy/theme.conf`。

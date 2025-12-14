@@ -16,7 +16,7 @@ const basicConfig = {
 		name: '署名-非商业性使用-相同方式共享 4.0 国际',
 		url: 'https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans',
 	},
-	favicon: 'https://www.mugzx.top/icon.png',
+	favicon: 'https://www.mugzx.top/api/icon.png',
 	language: 'zh-CN',
 	timeEstablished: '2025-01-24',
 	timezone: 'Asia/Shanghai',
