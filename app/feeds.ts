@@ -17,7 +17,7 @@ export default [
 				feed: 'https://www.linexic.top/rss.xml',
 				icon: getFavicon('www.linexic.top'),
 				avatar: getQqAvatar('2793151375', QqAvatarSize.Size100),
-				archs: ['Astro', 'Netlify'],
+				archs: ['Astro', 'Vercel'],
 				date: '2025-01-24',
 				comment: '交流各种技术，互相分享好东西，经常鼓励我的选择。',
 			},

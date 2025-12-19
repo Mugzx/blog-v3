@@ -10,7 +10,7 @@ recommend: true
 references:
   - title: archlinux 简明指南
     link: https://arch.icekylin.online/guide/rookie/basic-install
-  - title: Home · SHORiN-KiWATA/ShorinArchExperience-ArchlinuxGuide Wiki
+  - title: SHORiNのArch Linux实践经历与指南
     link: https://github.com/SHORiN-KiWATA/ShorinArchExperience-ArchlinuxGuide/wiki
 ---
 
@@ -26,7 +26,7 @@ references:
 
 ## 基于简明指南的注意事项
 
-你可以在不同的硬盘中安装 Arch Linux，这样可以 :tip[更安全]{tip="随便折腾不怕把原来 Windows 系统搞坏～"} 地折腾😘。
+你可以在不同的硬盘中安装 Arch Linux，这样可以更安全地折腾😘。
 
 ### Ventoy 的启动模式
 
@@ -59,18 +59,18 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 
 如果这个报错信息影响了你输入命令的话，可以在 `GRUB_CMDLINE_LINUX` 中添加 `pci=noaer`，禁用这个报错信息，除此之外，还需要添加grub的引导参数。
 
-- Windows10 需要添加 `GRUB_DISABLE_OS_PROBER=false` :blur[而 Windows11 ~~不~~需要。]
+- Windows 系统需要添加 `GRUB_DISABLE_OS_PROBER=false`。
   - **（可选）** 选择 rEFind 进行引导则不添加。
 
-- 英特尔的硬件请在 `GRUB_CMDLINE_LINUX_DEFAULT` 中添加 `modprobe.blacklist=iTCO_wdt` 而不是 `nowatchdog`。
+- 英特尔的硬件请在 `GRUB_CMDLINE_LINUX_DEFAULT` 中添加 `nowatchdog`和`modprobe.blacklist=iTCO_wdt`。
 
 ### 手动为 rEFind 安装驱动
 
 大致步骤与 [🔍 rEFind](https://arch.icekylin.online/guide/advanced/optional-cfg-2.html#%F0%9F%94%8D-refind) 的操作相同，但需要注意路径问题，如果发现通过 rEFind 引导失败了，可以参考以下修改。
 
 ```[refind_linux.conf]
-"Boot with standard options"  "root=UUID=d69d9dc3-141c-495c-a6fc-fa6b8d3f4991 rw rootflags=subvol=@ pci=noaer loglevel=5 modprobe.blacklist=iTCO_wdt initrd=intel-ucode.img initrd=initramfs-%v.img"
-"Boot to single-user mode"    "root=UUID=d69d9dc3-141c-495c-a6fc-fa6b8d3f4991 rw rootflags=subvol=@ pci=noaer loglevel=5 modprobe.blacklist=iTCO_wdt initrd=intel-ucode.img initrd=initramfs-%v.img single"
+"Boot with standard options"  "root=UUID=d69d9dc3-141c-495c-a6fc-fa6b8d3f4991 rw rootflags=subvol=@ pci=noaer loglevel=5 nowatchdog modprobe.blacklist=iTCO_wdt initrd=intel-ucode.img initrd=initramfs-%v.img"
+"Boot to single-user mode"    "root=UUID=d69d9dc3-141c-495c-a6fc-fa6b8d3f4991 rw rootflags=subvol=@ pci=noaer loglevel=5 nowatchdog modprobe.blacklist=iTCO_wdt initrd=intel-ucode.img initrd=initramfs-%v.img single"
 "Boot with minimal options"   "ro root=UUID=d69d9dc3-141c-495c-a6fc-fa6b8d3f4991"
 ```
 
@@ -87,7 +87,7 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 
 ### 窗口
 
-窗口可以在显示和监视器-显示器配置中调整屏幕缩放率，推荐为100%或120%，只要舒服即可。
+窗口可以在显示和监视器-显示器配置中调整屏幕缩放率，推荐为100%或120%，舒服即可。
 
 在颜色和主题-窗口装饰元素中可以调整右上角的窗口按钮大小，推荐设置为中等。
 
@@ -106,15 +106,7 @@ caption: 仿 Windows11 布局
 ---
 ::
 
-这是我的 KDE Plasma 的配置，可以参考看看。
-
-## 尝试更多
-
-了解完 Linux 的基本知识，也许就可以开始尝试更多桌面环境了？
-
-:quote[比如niri、Hyprland。]
-
-安装部分可以查看参考链接内的内容，按步骤安装即可。需要注意的就是**安装前创建快照**与**具体问题具体分析**。
+这是我的 KDE Plasma 的配置，可以参考看看，壁纸出自 [RealShovelKun](https://www.reddit.com/r/MoeMorphism/comments/umjhgw/oc_arch_linuxchan_by_myself)。
 
 ## 软件
 
@@ -129,7 +121,6 @@ caption: 仿 Windows11 布局
 
 ::link-card
 ---
-icon: 
 title: 从 VSCode 到 VSCodium
 description: 一款完全开源的代码编辑器替代方案，轻松从 VSCode 迁移到 VSCodium，享受去遥测的纯净开发体验。
 link: /2025/vscode-to-vscodium
@@ -147,8 +138,20 @@ caption: A minimalistic rEFInd theme
 
 [Pr0cella/rEFInd-glassy](https://github.com/Pr0cella/rEFInd-glassy) 是一个极简，扁平化风格的 rEFInd 主题。
 
-:copy{lang="zsh" code="mkdir /boot/EFI/refind/themes"}
+:copy{lang="zsh" code="sudo mkdir /boot/EFI/refind/themes && cd /boot/EFI/refind/themes"}
 :copy{lang="zsh" code="git clone https://github.com/Pr0cella/rEFInd-glassy.git"}
 :copy{lang="zsh" code="vim /boot/EFI/refind/refind.conf"}
 
 编辑器打开 refind.conf，找个合适的位置添加 `include themes/rEFInd-glassy/theme.conf`。
+
+### localsend
+
+:copy{lang="zsh" code="yay -S localsend-bin"}
+
+## 尝试更多
+
+了解完 Linux 的基本知识，也许可以尝试更多桌面环境了。
+
+:quote[比如niri和Hyprland。]
+
+安装部分可以查看参考链接内的内容，按步骤安装即可。需要注意的就是**安装前创建快照**与**具体问题具体分析**。
