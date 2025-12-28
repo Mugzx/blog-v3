@@ -24,7 +24,7 @@ references:
 第二次成功安装了 Arch Linux，遂准备写下这篇文章进行记录。
 ::
 
-## 基于简明指南的注意事项
+## 注意事项
 
 你可以在不同的硬盘中安装 Arch Linux，这样可以更安全地折腾😘。
 
@@ -57,9 +57,9 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 
 :copy{lang="zsh" code="vim /etc/default/grub"}
 
-如果这个报错信息影响了你输入命令的话，可以在 `GRUB_CMDLINE_LINUX` 中添加 `pci=noaer`，禁用这个报错信息，除此之外，还需要添加grub的引导参数。
+如果这个报错信息影响了你输入命令的话，可以在 `GRUB_CMDLINE_LINUX` 中添加 `pci=noaer`，禁用这个报错信息，除此之外，还需要调整 grub 的引导参数。
 
-- Windows 系统需要添加 `GRUB_DISABLE_OS_PROBER=false`。
+- 取消 `GRUB_DISABLE_OS_PROBER=false` 的注释，以便进行双系统引导。
   - **（可选）** 选择 rEFind 进行引导则不添加。
 
 - 英特尔的硬件请在 `GRUB_CMDLINE_LINUX_DEFAULT` 中添加 `nowatchdog`和`modprobe.blacklist=iTCO_wdt`。
@@ -76,7 +76,7 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 
 对你来讲，内核参数的路径也许并不需要`@\boot\`的前缀，直接填写文件名即可。
 
-## 基于简明指南的基本美化
+## 基本美化
 
 ### 字体
 
@@ -114,6 +114,8 @@ caption: 仿 Windows11 布局
 
 :copy{lang="zsh" code="sudo pacman -S daed"}
 :copy{lang="zsh" code="sudo systemctl enable --now daed"}
+
+或使用 `yay -U`{lang="zsh"} 本地安装 `.pkg.tar.zst` 软件包。
 
 ### VSCodium
 

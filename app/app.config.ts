@@ -53,7 +53,7 @@ export default defineAppConfig({
 			{ icon: 'ph:github-logo-bold', text: 'user@muium', url: 'https://github.com/Mugzx' },
 			{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
 			{ icon: 'ph:books-bold', text: 'OPML聚合', url: `${blogConfig.url}/zhilu.opml` },
-			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/plain.html' },
+			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/typewriter.html' },
 		] satisfies NavItem[],
 		/** 页脚站点地图 */
 		nav: [
@@ -61,7 +61,7 @@ export default defineAppConfig({
 				title: '探索',
 				items: [
 					{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
-					{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/plain.html' },
+					{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/typewriter.html' },
 					{ icon: 'ph:flying-saucer-bold', text: '异次元旅行', url: 'https://travel.moe/go.html?travel=on' },
 				],
 			},
