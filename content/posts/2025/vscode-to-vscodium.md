@@ -20,6 +20,16 @@ VSCodium 与 VSCode 相比去除了遥测功能，并使用 OpenVSX 这个开源
 
 数据是通用的，如果需要数据同步安装 [Syncing](https://open-vsx.org/extension/nonoroazoro/syncing) 扩展即可。
 
+### 注册表
+
+- 添加右键菜单
+  :copy{prompt="PS>" code='reg import "C:\Users\Mugzx\scoop\apps\vscodium\current\install-context.reg"'}
+
+- 设置文件默认打开的应用
+  :copy{prompt="PS>" code='reg import "C:\Users\Mugzx\scoop\apps\vscodium\current\install-associations.reg"'}
+
+注意要修改为你自己的安装路径。
+
 ## 市场
 
 如果在 OpenVSX 这个市场里面没有想要的扩展，替换为官方的市场即可。
