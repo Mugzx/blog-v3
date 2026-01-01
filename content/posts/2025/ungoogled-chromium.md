@@ -4,7 +4,7 @@ description: 介绍 Ungoogled Chromium 的优势，分享安装方法及常用�
 date: 2025-10-24 00:11:45
 updated: 2025-12-09 12:51:52
 categories: [分享]
-tags: [Chrome, Ungoogled Chromium ]
+tags: [Chrome, Ungoogled Chromium]
 references:
   - title: 📋 ungoogled chromium 安装配置 - 布铃酱的点心铺
     link: https://blyrin.cn/notes/ungoogled-chromium
