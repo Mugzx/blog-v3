@@ -10,8 +10,8 @@
 		交流电台
 	</div>
 
-	<Tip copy :icon="false" :tip-options="{ placement: 'left' }">
-		<Icon name="ri:qq-fill" />938973313
+	<Tip copy icon="" :tip-options="{ placement: 'left' }">
+		<Icon name="ri:qq-fill" />169994096
 	</Tip>
 </BlogWidget>
 </template>
