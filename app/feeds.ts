@@ -98,7 +98,7 @@ export default [
 				feed: 'https://blog.adproqwq.top/atom.xml',
 				icon: getFavicon('blog.adproqwq.top'),
 				avatar: getGhAvatar('adproqwq'),
-				archs: ['Vue', 'Vercel'],
+				archs: ['Valaxy', 'Vercel'],
 				date: '2025-07-25',
 				comment: '业余前端开发，维护着各类好东西。',
 			},
