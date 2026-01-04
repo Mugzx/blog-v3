@@ -60,7 +60,7 @@ export default defineAppConfig({
 		/** 侧边栏底部图标导航 */
 		iconNav: [
 			{ icon: 'ph:house-bold', text: '个人主页', url: blogConfig.author.homepage },
-			{ icon: 'ph:github-logo-bold', text: 'user@muium', url: 'https://github.com/Mugzx' },
+			{ icon: 'ph:github-logo-bold', text: 'GitHub@Mugzx', url: 'https://github.com/Mugzx' },
 			{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
 			{ icon: 'ph:books-bold', text: 'OPML聚合', url: `${blogConfig.url}/zhilu.opml` },
 			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/typewriter.html' },
@@ -78,7 +78,7 @@ export default defineAppConfig({
 			{
 				title: '社交',
 				items: [
-					{ icon: 'ph:github-logo-bold', text: 'user@muium', url: 'https://github.com/Mugzx' },
+					{ icon: 'ph:github-logo-bold', text: 'GitHub@Mugzx', url: 'https://github.com/Mugzx' },
 					{ icon: 'tabler:brand-bluesky', text: '@mugzx.bsky.social', url: 'https://bsky.app/profile/mugzx.bsky.social' },
 					{ icon: 'ph:envelope-simple-bold', text: blogConfig.author.email, url: `mailto:${blogConfig.author.email}` },
 				],
@@ -86,7 +86,7 @@ export default defineAppConfig({
 			{
 				title: '信息',
 				items: [
-					{ icon: 'simple-icons:nuxtdotjs', text: `主题: Clarity-${version}`, url: 'https://github.com/L33Z22L11/blog-v3' },
+					{ icon: 'simple-icons:nuxt', text: `主题: Clarity-${version}`, url: 'https://github.com/L33Z22L11/blog-v3' },
 					{ icon: 'ph:hourglass-high-bold', text: 'Umami数据统计', url: 'https://umami.mugzx.top/share/L9FxKfmT6aulBfWe' },
 					{ icon: 'ph:certificate-bold', text: '萌备20259900号', url: 'https://icp.gov.moe/?keyword=20259900' },
 				],
