@@ -3,9 +3,9 @@ import type { FeedGroup } from '../app/types/feed'
 import { getFavicon, getGhAvatar, getGhIcon, getQqAvatar, QqAvatarSize } from './utils/img'
 
 export default [
-	// #region 相谈甚多
+	// #region 朋友们
 	{
-		name: '相谈甚多',
+		name: '朋友们',
 		// desc: '',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
@@ -19,7 +19,7 @@ export default [
 				avatar: getQqAvatar('2793151375', QqAvatarSize.Size100),
 				archs: ['Astro', 'Vercel'],
 				date: '2025-01-24',
-				comment: '交流各种技术，互相分享好东西，经常鼓励我的选择。',
+				comment: '交流技术，互相分享，经常鼓励。',
 			},
 			{
 				author: '枫落丰源',
@@ -30,17 +30,8 @@ export default [
 				avatar: getGhAvatar('Qiufengluoyes'),
 				archs: ['Astro', 'Vercel'],
 				date: '2025-01-24',
-				comment: '启蒙了我的博客搭建，目前正在记录生活随笔。',
+				comment: '启蒙博客搭建，正在记录生活。',
 			},
-		],
-	},
-	// #endregion
-	// #region 朋友
-	{
-		name: '朋友们',
-		// desc: '',
-		// @keep-sorted { "keys": ["date"] }
-		entries: [
 			{
 				author: 'MeowcoQAQ',
 				title: 'MeowcoQAQ\'s Blog',
@@ -88,7 +79,7 @@ export default [
 				avatar: getGhAvatar('damesck233'),
 				archs: ['React', 'Cloudflare'],
 				date: '2025-05-09',
-				comment: '这是怕坛大妈，KLPBBS的草级版主。',
+				comment: '怕坛大妈，KLPBBS的草级版主。',
 			},
 			{
 				author: 'Aone',
