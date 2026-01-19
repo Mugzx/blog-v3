@@ -144,9 +144,9 @@ export default [
 			{
 				author: '月空人',
 				desc: '偶尔写些博客，发发牢骚',
-				feed: 'https://www.whbbit.cn/atom.xml',
-				link: 'https://www.whbbit.cn',
-				icon: getFavicon('www.whbbit.cn'),
+				feed: 'https://www.weilog.me/atom.xml',
+				link: 'https://www.weilog.me',
+				icon: getFavicon('www.weilog.me'),
 				avatar: getGhAvatar('Whbbit1999'),
 				archs: ['Nuxt', '服务器'],
 				date: '2025-09-13',
