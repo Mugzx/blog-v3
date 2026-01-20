@@ -3,12 +3,9 @@ title: 入手 Cudy TR3000
 description: 我出于系统的安装便利，入手了一台小巧的路由器，同时也发现了该路由器的不足之处。
 date: 2026-01-10 13:29:11
 updated: 2026-01-20 01:27:52
-image: # 图片
 categories: [分享]
 tags: [路由器]
 references:
-  - title: 关于"旁路由"的一些吐槽
-    link: https://github.com/Aethersailor/Custom_OpenClash_Rules/wiki
   - title: OpenWrt Wiki - Cudy TR3000
     link: https://openwrt.org/toh/cudy/tr3000
 ---

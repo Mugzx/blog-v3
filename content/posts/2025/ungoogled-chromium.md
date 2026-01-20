@@ -8,6 +8,8 @@ tags: [Chrome, Ungoogled Chromium]
 references:
   - title: 📋 ungoogled chromium 安装配置 - 布铃酱的点心铺
     link: https://blyrin.cn/notes/ungoogled-chromium
+  - title: 谷歌 Chrome 浏览器将允许用户关闭检测诈骗端侧 AI 模型
+    link: https://www.ithome.com/0/914/184.htm
 ---
 
 ## 换一个
@@ -100,3 +102,8 @@ Ungoogled Chromium 的默认标签页仅显示快捷方式，修改新标签地�
 | [脚本猫](https://github.com/scriptscat/scriptcat) | 油猴脚本 |
 | [陪读蛙](https://github.com/mengxi-ream/read-frog) | 翻译 |
 ::
+
+
+## 后续
+
+根据 IT 之家的报道，似乎支持关闭了。
