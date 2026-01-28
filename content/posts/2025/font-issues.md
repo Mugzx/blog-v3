@@ -3,10 +3,8 @@ title: 字体优化与显示效果提升
 description: 包含两个不同但互补的字体优化实践：一是针对网站性能的字体子集化，二是针对系统中显示质量的字体更新。可以从中获得实用的字体优化方案，让良好体验始终走在前列。
 date: 2025-02-06 22:13:42
 updated: 2025-10-05 17:16:05
-image: https://mu-s4.s3.bitiful.net/2025/10/05.avif!style=1
 categories: [分享]
 tags: [字体]
-recommend: true
 references:
   - title: 看小字不割裂的新微软雅黑！手把手无损替换旧微软雅黑！
     link: https://www.bilibili.com/video/BV1YGE1z2ECR

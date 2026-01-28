@@ -36,7 +36,9 @@ Google 的 Chrome 浏览器总是会在用户数据的路径中生成AI模型相
 
 ### Widevine DRM
 
-观看受版权保护的视频需要安装 Widevine DRM 组件。不过目前从 `dl.google.com` 安装组件的方式已经失效，Linux 有社区维护的组件，而其他系统仅推荐从文件路径中手动提取。
+观看受版权保护的视频需要安装 Widevine DRM 组件。不过目前从 `dl.google.com` 安装组件的方式已经失效，Arch Linux 有社区维护的组件与包含 Widevine 组件的版本。
+
+而其他系统仅推荐从文件路径中手动提取。
 
 ## 功能配置
 
@@ -48,7 +50,7 @@ Google 的 Chrome 浏览器总是会在用户数据的路径中生成AI模型相
 | chrome://flags/#enable-tab-audio-muting | Enabled |
 | chrome://flags/#side-by-side | Enabled - hide mini toolbar on active view |
 
-开启多线程下载， :tip[控制单个标签页静音]{tip="参考 Microsoft Edge 和 Firefox 的标签页"} 和左右分屏。
+开启多线程下载， :tip[控制单个标签页静音]{tip="可以参考 Microsoft Edge 和 Firefox 的标签页"} 和左右分屏。
 
 ### 增强功能
 

@@ -3,10 +3,8 @@ title: Arch Linux 安装记录
 description: 文章记录了手动安装 Arch Linux 过程中一些问题的解决方法以及基础的系统美化，以便快速上手。
 date: 2025-11-23 19:59:22
 updated: 2025-12-14 22:08:52
-image: https://mu-s4.s3.bitiful.net/2025/11/28.avif?!style=1
 categories: [随笔]
 tags: [Arch, Linux, 指南]
-recommend: true
 references:
   - title: archlinux 简明指南
     link: https://arch.icekylin.online/guide/rookie/basic-install
@@ -148,7 +146,7 @@ caption: A minimalistic rEFInd theme
 
 ### localsend
 
-:copy{lang="zsh" code="yay -S localsend-bin"}
+:copy{lang="zsh" code="sudo pacman -S localsend"}
 
 ## 尝试更多
 
