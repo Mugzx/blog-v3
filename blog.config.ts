@@ -19,7 +19,7 @@ const basicConfig = {
 	favicon: 'https://www.mugzx.top/api/icon.png',
 	language: 'zh-CN',
 	timeEstablished: '2025-01-24',
-	timezone: 'Asia/Shanghai',
+	timeZone: 'Asia/Shanghai',
 	url: 'https://blog.mugzx.top',
 	defaultCategory: '未分类',
 }
