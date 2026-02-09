@@ -1,6 +1,7 @@
 // 友链检测 CLI 需要使用显式导入和相对路径
 import type { FeedGroup } from '../app/types/feed'
-import { getFavicon, getGhAvatar, getGhIcon, getQqAvatar, QqAvatarSize } from './utils/img'
+import { myFeed } from '../blog.config'
+import { getFavicon, getGhAvatar, getGhIcon, getOicqAvatar, OicqAvatarSize } from './utils/img'
 
 export default [
 	// #region 朋友们
@@ -16,7 +17,7 @@ export default [
 				link: 'https://www.linexic.top',
 				feed: 'https://www.linexic.top/rss.xml',
 				icon: getFavicon('www.linexic.top'),
-				avatar: getQqAvatar('2793151375', QqAvatarSize.Size100),
+				avatar: getOicqAvatar('2793151375', OicqAvatarSize.Size100),
 				archs: ['Astro', 'Vercel'],
 				date: '2025-01-24',
 				comment: '交流技术，互相分享，经常鼓励。',
