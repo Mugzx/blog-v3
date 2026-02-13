@@ -120,6 +120,17 @@ export default [
 				date: '2025-11-14',
 				comment: '分享编程开发及环境配置。',
 			},
+			{
+				author: '剥龙虾大王',
+				title: '乱话三千',
+				desc: '养了一只叫基金的可爱小猫,平时会写点技术向的东西,有点做饭的小爱好',
+				link: 'https://www.zanks.link',
+				feed: 'https://www.zanks.link/index.xml',
+				icon: getFavicon('www.zanks.link'),
+				avatar: getGithubAvatar('ZaNksC'),
+				archs: ['Hugo', '服务器'],
+				date: '2026-02-13',
+			},
 		],
 	},
 	/* ========从此处新增友链======== */
