@@ -1,7 +1,8 @@
 // 友链检测 CLI 需要使用显式导入和相对路径
 import type { FeedGroup } from '../app/types/feed'
 import { myFeed } from '../blog.config'
-import { getFavicon, getGhAvatar, getGhIcon, getOicqAvatar, OicqAvatarSize } from './utils/img'
+// eslint-disable-next-line unused-imports/no-unused-imports
+import { getFavicon, getGithubAvatar, getGithubIcon, getOciqGroupAvatar, getOicqAvatar, OicqAvatarSize } from './utils/img'
 
 export default [
 	// #region 朋友们
@@ -28,7 +29,7 @@ export default [
 				link: 'https://blog.feng1026.top',
 				feed: 'https://blog.feng1026.top/rss.xml',
 				icon: 'https://unavatar.webp.se/duckduckgo/www.feng1026.top?width=32',
-				avatar: getGhAvatar('Qiufengluoyes'),
+				avatar: getGithubAvatar('Qiufengluoyes'),
 				archs: ['Astro', 'Vercel'],
 				date: '2025-01-24',
 				comment: '启蒙博客搭建，正在记录生活。',
@@ -40,7 +41,7 @@ export default [
 				link: 'https://blog.mcneko.com',
 				feed: 'https://blog.mcneko.com/index.php/feed/',
 				icon: 'https://wsrv.nl/?url=github.com/Termux.png?size=32&output=webp',
-				avatar: getGhAvatar('nkqa'),
+				avatar: getGithubAvatar('nkqa'),
 				archs: ['Typecho', 'Cloudflare'],
 				date: '2025-01-24',
 				comment: 'MCNeko论坛的坛主，分享内容与琐事。',
@@ -51,8 +52,8 @@ export default [
 				desc: '没有既定的终点，只有无限的探索',
 				link: 'https://blog.stevenw.cc',
 				feed: 'https://blog.stevenw.cc/rss.xml',
-				icon: getGhIcon('Steven-WZH'),
-				avatar: getGhAvatar('Steven-WZH'),
+				icon: getGithubIcon('Steven-WZH'),
+				avatar: getGithubAvatar('Steven-WZH'),
 				archs: ['Halo', 'Cloudflare'],
 				date: '2025-02-07',
 				comment: 'MC爱好者，分享折腾经历。',
@@ -65,7 +66,7 @@ export default [
 				desc: 'xzadudu179的太空基地',
 				link: 'https://www.xzadudu179.top',
 				icon: getFavicon('www.xzadudu179.top'),
-				avatar: getGhAvatar('xzadudu179'),
+				avatar: getGithubAvatar('xzadudu179'),
 				archs: ['Vue', 'Vercel'],
 				date: '2025-04-19',
 				comment: '太空与科幻主题风格，全栈爱好者。',
@@ -77,7 +78,7 @@ export default [
 				desc: '致不完美的明天_',
 				link: 'https://damesck.net',
 				icon: getFavicon('damesck.net'),
-				avatar: getGhAvatar('damesck233'),
+				avatar: getGithubAvatar('damesck233'),
 				archs: ['React', 'Cloudflare'],
 				date: '2025-05-09',
 				comment: '怕坛大妈，KLPBBS的草级版主。',
@@ -89,7 +90,7 @@ export default [
 				link: 'https://blog.adproqwq.top',
 				feed: 'https://blog.adproqwq.top/atom.xml',
 				icon: getFavicon('blog.adproqwq.top'),
-				avatar: getGhAvatar('adproqwq'),
+				avatar: getGithubAvatar('adproqwq'),
 				archs: ['Valaxy', 'Vercel'],
 				date: '2025-07-25',
 				comment: '业余前端开发，维护着各类好东西。',
@@ -101,7 +102,7 @@ export default [
 				desc: '天空就是一杯橘子味的柠檬汽水',
 				link: 'https://blog.lemonstar.me',
 				icon: 'https://unavatar.webp.se/duckduckgo/blog.lemonstar.me?width=32',
-				avatar: getGhAvatar('yangle-q'),
+				avatar: getGithubAvatar('yangle-q'),
 				archs: ['Hexo', 'Cloudflare'],
 				date: '2025-08-28',
 				comment: '记录生活实况，折腾博客主题。',
@@ -114,7 +115,7 @@ export default [
 				link: 'https://blog.horonlee.com',
 				feed: 'https://blog.horonlee.com/atom.xml',
 				icon: 'https://bu.dusays.com/2023/02/05/63dfc7f2ced91.png',
-				avatar: getGhAvatar('horonlee'),
+				avatar: getGithubAvatar('horonlee'),
 				archs: ['Valaxy', 'EdgeOne'],
 				date: '2025-11-14',
 				comment: '分享编程开发及环境配置。',
@@ -137,7 +138,7 @@ export default [
 				feed: 'https://blog.zhilu.site/atom.xml',
 				link: 'https://blog.zhilu.site',
 				icon: getFavicon('blog.zhilu.site'),
-				avatar: getGhAvatar('L33Z22L11'),
+				avatar: getGithubAvatar('L33Z22L11'),
 				archs: ['Nuxt', 'Vercel'],
 				date: '2025-03-23',
 				comment: '技术以及文笔参考（博客主题原作者）',
@@ -148,7 +149,7 @@ export default [
 				feed: 'https://www.weilog.me/atom.xml',
 				link: 'https://www.weilog.me',
 				icon: getFavicon('www.weilog.me'),
-				avatar: getGhAvatar('Whbbit1999'),
+				avatar: getGithubAvatar('Whbbit1999'),
 				archs: ['Nuxt', '服务器'],
 				date: '2025-09-13',
 				comment: '技术参考',

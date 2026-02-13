@@ -1,13 +1,10 @@
 <script setup lang="ts">
+import type { ModalEmits, ModalProps } from '#modals'
 import MiniSearch from 'minisearch'
 
-const props = defineProps<{
-	open?: boolean
-}>()
+const props = defineProps<ModalProps>()
 
-defineEmits<{
-	close: []
-}>()
+defineEmits<ModalEmits>()
 
 const appConfig = useAppConfig()
 const segmenter = Intl.Segmenter && new Intl.Segmenter(appConfig.language, { granularity: 'word' })
@@ -49,7 +46,7 @@ const listResult = useTemplateRef('list-result')
 const activeIndex = ref(0)
 const activeItem = computed(() => listResult.value?.children[activeIndex.value] as HTMLElement | undefined)
 
-watch(() => props.open, focusInput)
+whenever(() => props.open, focusInput)
 
 watch(status, (newStatus) => {
 	if (newStatus === 'success' && data.value) {

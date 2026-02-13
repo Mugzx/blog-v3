@@ -1,7 +1,8 @@
 import type { Nav, NavItem } from '~/types/nav'
+import { pascal } from 'radash'
 import { Temporal } from 'temporal-polyfill'
 import blogConfig from '~~/blog.config'
-import { version } from '~~/package.json'
+import { name, version } from '~~/package.json'
 
 // 图标查询：https://yesicon.app/ph?s=bold
 // 图标插件：https://marketplace.visualstudio.com/items?itemName=antfu.iconify
@@ -83,9 +84,9 @@ export default defineAppConfig({
 			{
 				title: '信息',
 				items: [
-					{ icon: 'simple-icons:nuxt', text: `主题: Clarity-${version}`, url: 'https://github.com/L33Z22L11/blog-v3' },
+					{ icon: 'simple-icons:nuxt', text: `主题: ${pascal(name)} ${version}`, url: 'https://github.com/L33Z22L11/blog-v3' },
 					{ icon: 'ph:hourglass-high-bold', text: 'Umami数据统计', url: 'https://umami.mugzx.top/share/L9FxKfmT6aulBfWe' },
-					{ icon: 'ph:certificate-bold', text: '萌备20259900号', url: 'https://icp.gov.moe/?keyword=20259900' },
+					// { icon: 'ph:certificate-bold', text: '萌备20259900号', url: 'https://icp.gov.moe/?keyword=20259900' },
 				],
 			},
 		] satisfies Nav,
