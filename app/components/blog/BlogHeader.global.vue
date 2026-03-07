@@ -31,6 +31,7 @@ const appConfig = useAppConfig()
 			<span
 				v-for="(char, charIndex) in appConfig.author.name"
 				:key="charIndex"
+				class="split-char"
 				:style="getFixedDelay((charIndex + 1) * .1)"
 				v-text="char"
 			/>
@@ -67,12 +68,12 @@ const appConfig = useAppConfig()
 }
 
 @font-face {
-	font-family: MiSansLatin;
-	src: url("/fonts/MiSansLatin.woff2");
+	font-family: AlimamaFangYuanTi;
+	src: url("/fonts/AlimamaFangYuanTi.woff2");
 }
 
 .header-title {
-	font-family: MiSansLatin, "Noto Sans SC", sans-serif;
+	font-family: AlimamaFangYuanTi, "Noto Sans SC", sans-serif;
 	font-size: 1.5em;
 	font-synthesis: none;
 	font-variation-settings: "wght" 600, "BEVL" 100;
