@@ -12,7 +12,9 @@ references:
 
 ## 原因
 
-为了能让我的 Arch Linux 系统安装软件包可以方便一些，也是出于家里的房子还在装修，未来我的房间会有一个单独的网线接口等原因。决定先行购买一台 Cudy TR3000，尽早熟悉如何使用比较好。
+为了能让我的 Arch Linux 系统安装软件包可以方便一些，也是出于家里的房子还在装修，未来我的房间会有一个单独的网线接口等原因。
+
+决定先行购买一台 Cudy TR3000，尽早熟悉如何使用比较好。
 
 ## 简易安装
 
@@ -36,7 +38,7 @@ references:
 我的设备不是 SN2544 以后的新批次 128M 设备，是用旧的 :tip[过渡固件]{tip="MD5: b8333d8eebd067fcb43bec855ac22364"} 刷入的系统。
 ::
 
-安全起见，我更建议 SN2544 之前的 128M 设备依旧使用旧的过渡固件，新批次的设备直接 [前往官网获取固件](https://www.cudy.com/zh-cn/blogs/faq/openwrt-software-download) 即可。
+安全起见，我更建议 SN2544 之前的 128M 设备依旧去用在这之前的过渡固件，新批次的设备直接 [前往官网获取固件](https://www.cudy.com/zh-cn/blogs/faq/openwrt-software-download) 即可。
 
 ## 基本配置
 
@@ -48,11 +50,7 @@ references:
 
 ### 下载大文件吃力
 
-Cudy TR3000 只要不断电以及重启就可以很稳定的使用了，不过小巧的体积说明它的散热是有些问题的。
-
-:copy{prompt="$" code='pacman -S --noconfirm --needed adobe-source-han-serif-cn-fonts adobe-source-han-sans-cn-fonts noto-fonts-cjk noto-fonts noto-fonts-emoji'}
-
-尤其是在下载思源黑体等字体文件时有着明显的发热和被其拖慢的下载速度。
+Cudy TR3000 只要不断电以及重启就可以很稳定的使用了，不过小巧的体积说明它的散热是有些问题的。尤其是在下载大文件时有着明显的发热和被其拖慢的下载速度。
 
 ### 信号干扰
 
