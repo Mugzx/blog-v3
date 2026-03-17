@@ -51,6 +51,6 @@ references:
 
 ## 一些话
 
-这种在别人的博客的评论区里发广告的行为我是非常厌恶的，在一个多月前我还在 :badge[DuckXu]{link="https://github.com/scduckxu"} 的 [新兴 “备案” 就是一场韭菜骗局](https://i.duckxu.com/archives/idiot_blog_group_and_regist_num.html) 文章里评价这种行为，没想到这就发生到我身上了。
+这种在别人的博客的评论区里发广告的行为我是非常厌恶的，在一个多月前我还在 :badge[DuckXu]{link="https://github.com/scduckxu"} 的文章里评价这种行为，没想到这就发生到我身上了。
 
 博客归根到底还是记录历史的东西，在之后能够清楚自己每天做了什么，就跟 GitHub 贡献图差不多。

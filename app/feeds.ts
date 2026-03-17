@@ -12,6 +12,18 @@ export default [
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
 			{
+				author: '白骨观',
+				title: '梦的小窝',
+				desc: '皮下三寸皆白骨',
+				link: 'https://blog.xmcyh.cn',
+				feed: 'https://blog.xmcyh.cn/index.php/feed',
+				icon: getFavicon('blog.xmcyh.cn'),
+				avatar: 'https://weavatar.com/avatar/e070ca1b761683c868d2ceffb5345c24c9cf52961f094964947673f7502c21e5?s=100',
+				archs: ['WordPress', '服务器'],
+				date: '2024-04-13',
+				comment: '曾赞助过我。',
+			},
+			{
 				author: 'LineXic',
 				title: 'LineXic\'s website',
 				desc: '难离难舍，想抱紧些。',
@@ -164,16 +176,6 @@ export default [
 				archs: ['Nuxt', '服务器'],
 				date: '2025-09-13',
 				comment: '技术参考',
-			},
-			{
-				author: 'Design Scenes',
-				link: 'https://fenx.work/',
-				feed: 'https://fenx.work/rss/',
-				icon: 'https://fenx.work/favicon.ico',
-				avatar: 'https://fenx.work/favicon.ico',
-				archs: ['Ghost', 'Fly'],
-				date: '2026-03-13',
-				comment: '聚焦设计与技术交叉领域，旗下Design Fragments不错。',
 			},
 		],
 	},
