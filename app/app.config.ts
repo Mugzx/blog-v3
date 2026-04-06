@@ -58,10 +58,10 @@ export default defineAppConfig({
 		/** 侧边栏底部图标导航 */
 		iconNav: [
 			{ icon: 'tabler:home', text: '个人主页', url: blogConfig.author.homepage },
-			{ icon: 'ri:qq-line', text: '交流群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
-			{ icon: 'tabler:brand-github', text: 'GitHub: L33Z22L11', url: 'https://github.com/L33Z22L11' },
+			{ icon: 'tabler:brand-github', text: 'GitHub: Mugzx', url: 'https://github.com/Mugzx' },
 			{ icon: 'tabler:rss', text: 'Atom订阅', url: '/atom.xml' },
-			{ icon: 'tabler:train', text: '开往 - 博客下一站', url: 'https://www.travellings.cn/go.html' },
+			{ icon: 'tabler:book', text: 'OPML聚合', url: `${blogConfig.url}/zhilu.opml` },
+			{ icon: 'tabler:train', text: '开往 - 博客下一站', url: 'https://www.travellings.cn/typewriter.html' },
 		] satisfies NavItem[],
 		/** 页脚站点地图 */
 		nav: [
@@ -75,8 +75,7 @@ export default defineAppConfig({
 			{
 				title: '社交',
 				items: [
-					{ icon: 'tabler:brand-github', text: 'L33Z22L11', url: 'https://github.com/L33Z22L11' },
-					{ icon: 'ri:qq-line', text: '群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
+					{ icon: 'tabler:brand-github', text: 'Mugzx', url: 'https://github.com/Mugzx' },
 					{ icon: 'tabler:mail', text: blogConfig.author.email, url: `mailto:${blogConfig.author.email}` },
 				],
 			},
@@ -84,8 +83,7 @@ export default defineAppConfig({
 				title: '信息',
 				items: [
 					{ icon: 'simple-icons:nuxt', text: `主题: ${pascalCase(name)} ${version}`, url: 'https://github.com/L33Z22L11/blog-v3' },
-					{ icon: 'tabler:color-swatch', text: '主题和组件文档', url: '/theme' },
-					{ icon: 'tabler:certificate', text: '陕ICP备2025082251号', url: 'https://beian.miit.gov.cn/' },
+					{ icon: 'tabler:chart-bar', text: 'Umami数据统计', url: 'https://umami.mugzx.top/share/L9FxKfmT6aulBfWe' },
 				],
 			},
 		] satisfies Nav,
