@@ -57,36 +57,35 @@ export default defineAppConfig({
 		copyright: `© ${Temporal.Now.plainDateISO().year.toString()} ${blogConfig.author.name}`,
 		/** 侧边栏底部图标导航 */
 		iconNav: [
-			{ icon: 'ph:house-bold', text: '个人主页', url: blogConfig.author.homepage },
-			{ icon: 'ph:github-logo-bold', text: 'Mugzx', url: 'https://github.com/Mugzx' },
-			{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
-			{ icon: 'ph:books-bold', text: 'OPML聚合', url: `${blogConfig.url}/zhilu.opml` },
-			{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/typewriter.html' },
+			{ icon: 'tabler:home', text: '个人主页', url: blogConfig.author.homepage },
+			{ icon: 'ri:qq-line', text: '交流群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
+			{ icon: 'tabler:brand-github', text: 'GitHub: L33Z22L11', url: 'https://github.com/L33Z22L11' },
+			{ icon: 'tabler:rss', text: 'Atom订阅', url: '/atom.xml' },
+			{ icon: 'tabler:train', text: '开往 - 博客下一站', url: 'https://www.travellings.cn/go.html' },
 		] satisfies NavItem[],
 		/** 页脚站点地图 */
 		nav: [
 			{
 				title: '探索',
 				items: [
-					{ icon: 'ph:rss-simple-bold', text: 'Atom订阅', url: '/atom.xml' },
-					{ icon: 'ph:subway-bold', text: '开往', url: 'https://www.travellings.cn/typewriter.html' },
-					{ icon: 'ph:flying-saucer-bold', text: '异次元旅行', url: 'https://travel.moe/go.html?travel=on' },
+					{ icon: 'tabler:rss', text: 'Atom订阅', url: '/atom.xml' },
+					{ icon: 'tabler:train', text: '开往', url: 'https://www.travellings.cn/go.html' },
 				],
 			},
 			{
 				title: '社交',
 				items: [
-					{ icon: 'ph:github-logo-bold', text: 'Mugzx', url: 'https://github.com/Mugzx' },
-					{ icon: 'tabler:brand-bluesky', text: '@mugzx.bsky.social', url: 'https://bsky.app/profile/mugzx.bsky.social' },
-					{ icon: 'ph:envelope-simple-bold', text: blogConfig.author.email, url: `mailto:${blogConfig.author.email}` },
+					{ icon: 'tabler:brand-github', text: 'L33Z22L11', url: 'https://github.com/L33Z22L11' },
+					{ icon: 'ri:qq-line', text: '群: 169994096', url: 'https://jq.qq.com/?_wv=1027&k=lQfNSeEd' },
+					{ icon: 'tabler:mail', text: blogConfig.author.email, url: `mailto:${blogConfig.author.email}` },
 				],
 			},
 			{
 				title: '信息',
 				items: [
 					{ icon: 'simple-icons:nuxt', text: `主题: ${pascalCase(name)} ${version}`, url: 'https://github.com/L33Z22L11/blog-v3' },
-					{ icon: 'ph:hourglass-high-bold', text: 'Umami数据统计', url: 'https://umami.mugzx.top/share/L9FxKfmT6aulBfWe' },
-					// { icon: 'ph:certificate-bold', text: '萌备20259900号', url: 'https://icp.gov.moe/?keyword=20259900' },
+					{ icon: 'tabler:color-swatch', text: '主题和组件文档', url: '/theme' },
+					{ icon: 'tabler:certificate', text: '陕ICP备2025082251号', url: 'https://beian.miit.gov.cn/' },
 				],
 			},
 		] satisfies Nav,
@@ -114,10 +113,9 @@ export default defineAppConfig({
 		{
 			title: '',
 			items: [
-				{ icon: 'ph:files-bold', text: '文章', url: '/' },
-				{ icon: 'ph:link-bold', text: '友链', url: '/link' },
-				{ icon: 'ph:archive-bold', text: '归档', url: '/archive' },
-				{ icon: 'ph:calendar-bold', text: '计划', url: 'https://fcno3o5nvedu.feishu.cn/wiki/RWd2w85DCi3LWqk3QyUcLNxwnDh' },
+				{ icon: 'tabler:files', text: '文章', url: '/' },
+				{ icon: 'tabler:link', text: '友链', url: '/link' },
+				{ icon: 'tabler:archive', text: '归档', url: '/archive' },
 			],
 		},
 	] satisfies Nav,
@@ -132,15 +130,15 @@ export default defineAppConfig({
 
 	themes: {
 		light: {
-			icon: 'ph:sun-bold',
+			icon: 'tabler:sun',
 			tip: '浅色模式',
 		},
 		system: {
-			icon: 'ph:monitor-bold',
+			icon: 'tabler:device-desktop',
 			tip: '跟随系统',
 		},
 		dark: {
-			icon: 'ph:moon-bold',
+			icon: 'tabler:moon',
 			tip: '深色模式',
 		},
 	},
