@@ -61,7 +61,7 @@ export default defineAppConfig({
 			{ icon: 'tabler:brand-github', text: 'GitHub: Mugzx', url: 'https://github.com/Mugzx' },
 			{ icon: 'tabler:rss', text: 'Atom订阅', url: '/atom.xml' },
 			{ icon: 'tabler:book', text: 'OPML聚合', url: `${blogConfig.url}/zhilu.opml` },
-			{ icon: 'tabler:train', text: '开往 - 博客下一站', url: 'https://www.travellings.cn/typewriter.html' },
+			{ icon: 'ri:subway-line', text: '开往 - 博客下一站', url: 'https://www.travellings.cn/typewriter.html' },
 		] satisfies NavItem[],
 		/** 页脚站点地图 */
 		nav: [
@@ -69,7 +69,7 @@ export default defineAppConfig({
 				title: '探索',
 				items: [
 					{ icon: 'tabler:rss', text: 'Atom订阅', url: '/atom.xml' },
-					{ icon: 'tabler:train', text: '开往', url: 'https://www.travellings.cn/go.html' },
+					{ icon: 'ri:subway-line', text: '开往', url: 'https://www.travellings.cn/typewriter.html' },
 				],
 			},
 			{
