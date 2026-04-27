@@ -33,7 +33,7 @@ export default [
 				avatar: getOicqAvatar('2793151375', OicqAvatarSize.Size100),
 				archs: ['Astro', 'Vercel'],
 				date: '2025-01-24',
-				comment: '交流技术，互相分享，经常鼓励。',
+				comment: '交流技术，互相分享，经常鼓励我。',
 			},
 			{
 				author: '枫落丰源',
@@ -44,7 +44,7 @@ export default [
 				avatar: getGithubAvatar('Qiufengluoyes'),
 				archs: ['Astro', 'Vercel'],
 				date: '2025-01-24',
-				comment: '启蒙博客搭建，正在记录生活。',
+				comment: '启蒙博客搭建，目前在记录生活。',
 			},
 			{
 				author: 'MeowcoQAQ',
@@ -142,6 +142,7 @@ export default [
 				avatar: getGithubAvatar('ZaNksC'),
 				archs: ['Hugo', '服务器'],
 				date: '2026-02-13',
+				comment: '设备体验分享，旅行经历，技术写作。',
 			},
 		],
 	},
