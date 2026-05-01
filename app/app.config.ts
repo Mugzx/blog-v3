@@ -68,8 +68,9 @@ export default defineAppConfig({
 			{
 				title: '探索',
 				items: [
-					{ icon: 'tabler:rss', text: 'Atom订阅', url: '/atom.xml' },
+
 					{ icon: 'ri:subway-line', text: '开往', url: 'https://www.travellings.cn/typewriter.html' },
+					{ icon: 'tabler:brand-blogger', text: '博友圈', url: 'https://www.boyouquan.com/planet-shuttle' },
 				],
 			},
 			{
