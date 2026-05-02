@@ -65,7 +65,7 @@ tags: [Cloudflare, R2, 对象存储]
 https://<ZONE>/cdn-cgi/image/<OPTIONS>/<SOURCE-IMAGE>
 ```
 
-根据 [官方文档](https://developers.cloudflare.com/images/transform-images/transform-via-url/#options) 的描述，将`<ZONE>`修改为你的域名，`<OPTIONS>`修改为处理参数，`<SOURCE-IMAGE>`修改为图片的路径即可启用 Cloudflare Images。
+根据 [官方文档](https://developers.cloudflare.com/images/transform-images/transform-via-url/#options) 的描述，将 `<ZONE>` 修改为你的域名，`<OPTIONS>` 修改为处理参数，`<SOURCE-IMAGE>` 修改为图片的路径即可启用 Cloudflare Images。
 
 ## 访问配置
 
@@ -92,7 +92,7 @@ https://<ZONE>/cdn-cgi/image/<OPTIONS>/<SOURCE-IMAGE>
 
 ### Referer 配置
 
-只有从 `blog.mugzx.top` 发起的请求才能访问 `r2.mugzx.top` 的资源（允许空Referer），其他域名的请求则会被拒绝。
+只有从 `blog.mugzx.top` 发起的请求才能访问 `r2.mugzx.top` 的资源（允许空 Referer ），其他域名的请求则会被拒绝。
 
 ```
 (http.host eq "r2.mugzx.top" and not http.referer contains "blog.mugzx.top" and http.referer ne "")
@@ -120,17 +120,17 @@ https://<ZONE>/cdn-cgi/image/<OPTIONS>/<SOURCE-IMAGE>
 
 缓存配置在**你的域名**→**规则**→**页面规则**中进行创建。
 
-- URL：`https://blog.mugzx.top/*`​， 必须使用https协议，根据使用情况后接`*`通配符。
+- URL：`https://blog.mugzx.top/*`​， 必须使用 https 协议，根据使用情况后接`*`通配符。
 - 浏览器缓存 TTL：1年
 - 边缘缓存 TTL：1个月
 - 缓存级别：缓存所有内容
 - 源服务器缓存控制：添加但不开启
 
-经常更换图片可以设置为7至14天内，不经常更换可以设置为1年，缓存配置会影响文件更新，当桶内资源发生变化但链接内容**没有变化**时，可以手动清除缓存。
+经常更换图片可以设置为 7 至 14 天内，不经常更换可以设置为 1 年，缓存配置会影响文件更新，当桶内资源发生变化但链接内容**没有变化**时，可以手动清除缓存。
 
 ::alert
 #title
-关于Edgeone如何配置R2存储桶
+关于 Edgeone 如何配置 R2 存储桶
 #default
 - [对象存储类源站配置实践](https://cloud.tencent.com/document/product/1552/122800)
 - [CORS 跨域响应配置](https://cloud.tencent.com/document/product/1552/120718)
@@ -138,4 +138,3 @@ https://<ZONE>/cdn-cgi/image/<OPTIONS>/<SOURCE-IMAGE>
 - [自定义速率限制规则](https://cloud.tencent.com/document/product/1552/93130)
 - [缓存配置](https://cloud.tencent.com/document/product/1552/94478)
 ::
-

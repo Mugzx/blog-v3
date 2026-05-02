@@ -43,7 +43,7 @@ Windows 与 Unix 换行符的风格不同，你可能还需要在 VS Code 等编
 :copy{prompt="签名者配置文件的路径" lang="bash" code="git config --global gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers"}
 :copy{prompt="自动签名提交" lang="bash" code="git config --global commit.gpgsign true"}
 
-现在前往 [SSH and GPG keys](https://github.com/settings/keys) 继续配置；点击 **New SSH key**，类型选择`Signing Key`，添加名称和公钥。
+现在前往 [SSH and GPG keys](https://github.com/settings/keys) 继续配置；点击 **New SSH key**，类型选择 `Signing Key`，添加名称和公钥。
 
 ### 配置完成
 
@@ -53,7 +53,7 @@ Windows 与 Unix 换行符的风格不同，你可能还需要在 VS Code 等编
 最后可以用这两条 git 命令再检查一遍即可。
 
 ::alert
-提示`Good "git" signature…`即为验证成功。
+提示 `Good "git" signature…` 即为验证成功。
 ::
 
 ## GPG 签名

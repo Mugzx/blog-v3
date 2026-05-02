@@ -2,7 +2,7 @@
 title: Arch Linux 安装记录
 description: 文章记录了手动安装 Arch Linux 过程中一些问题的解决方法以及基础的系统美化，以便快速上手。
 date: 2025-11-23 19:59:22
-updated: 2026-03-12 17:16:28
+updated: 2026-05-02 12:19:33
 categories: [随笔]
 tags: [Arch, Linux, 指南]
 references:
@@ -56,7 +56,7 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 - 取消 `GRUB_DISABLE_OS_PROBER=false` 的注释，以便进行双系统引导。
   - **（可选）** 选择 rEFind 进行引导则不添加。
 
-- 英特尔的硬件请在 `GRUB_CMDLINE_LINUX_DEFAULT` 中添加 `nowatchdog`和`modprobe.blacklist=iTCO_wdt`。
+- 英特尔的硬件请在 `GRUB_CMDLINE_LINUX_DEFAULT` 中添加 `nowatchdog` 和 `modprobe.blacklist=iTCO_wdt` 。
 
 ## 基本美化
 
@@ -65,7 +65,7 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 :copy{lang="bash" code="sudo pacman -S noto-fonts noto-fonts-emoji ttf-sarasa-gothic"}
 :copy{lang="bash" code="sudo pacman -S ttf-jetbrains-mono-nerd"}
 
-调整所有字体为 Sans Serif 12pt，等宽字体设置为 Monospace，大小同样为12pt。
+调整所有字体为 Sans Serif 12pt ，等宽字体设置为 Monospace ，大小同样为12pt。
 
 ### 窗口
 
@@ -73,20 +73,20 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 
 在颜色和主题-窗口装饰元素中可以调整右上角的窗口按钮大小，推荐设置为中等。
 
-### 面板配置
+### 桌面配置
 
 ::pic
 ---
-src: https://mu-s4.s3.bitiful.net/2025/11/28-one.avif?!style=1
-caption: 仿 Windows11 布局
+src: https://i.redd.it/5jwtpab3nny81.png
+caption: Arch Linux-chan
 ---
 ::
 
-这是我的 KDE Plasma 的配置，可以参考看看，壁纸出自 [RealShovelKun](https://www.reddit.com/r/MoeMorphism/comments/umjhgw/oc_arch_linuxchan_by_myself)。
+壁纸出自 [RealShovelKun](https://www.reddit.com/r/MoeMorphism/comments/umjhgw/oc_arch_linuxchan_by_myself)，我的 KDE Plasma 和 Niri 桌面环境目前都在用这个。
 
 ## 软件包
 
-有些包来自 `multilib` `archlinuxcn`的源，记得提前添加上去。
+有些包来自 `multilib` `archlinuxcn` 的源，记得提前添加上去。
 
 ### 透明代理
 
@@ -114,7 +114,7 @@ link: /2026/cudy-tr3000
 
 :copy{prompt="$" code='sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon'}
 
-在2018年之前推出的CPU，需要安装的是 `libva-intel-driver`，具体可见关于 [Coffee Lake](https://wiki.archlinux.org/title/Hardware_video_acceleration#VA-API) 的介绍。
+在2018年之前推出的 CPU ，需要安装的是 `libva-intel-driver`，具体可见关于 [Coffee Lake](https://wiki.archlinux.org/title/Hardware_video_acceleration#VA-API) 的介绍。
 
 :copy{prompt="$" code='sudo pacman -S intel-media-driver'}
 
