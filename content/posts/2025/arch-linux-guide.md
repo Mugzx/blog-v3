@@ -78,6 +78,7 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 ::pic
 ---
 src: https://i.redd.it/5jwtpab3nny81.png
+mirror: fly
 caption: Arch Linux-chan
 ---
 ::
