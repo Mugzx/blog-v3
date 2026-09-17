@@ -27,7 +27,7 @@ export default [
 			{
 				author: 'LineXic',
 				title: 'LineXic\'s website',
-				desc: '难离难舍，想抱紧些。',
+				desc: '具体问题，具体分析。',
 				link: 'https://www.linexic.top/',
 				feed: 'https://www.linexic.top/rss.xml',
 				icon: getFavicon('www.linexic.top'),
@@ -161,10 +161,10 @@ export default [
 	},
 	/* ========从此处新增友链======== */
 	// #endregion
-	// #region 参考
+	// #region 大佬
 	{
-		name: '参考',
-		desc: '这些是大佬。',
+		name: '大佬',
+		desc: '这些是参考。',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
 			{
