@@ -1,7 +1,4 @@
 {
-  "[css]": {
-    "editor.defaultFormatter": "stylelint.vscode-stylelint"
-  },
   "[mdc]": {
     "editor.defaultFormatter": "Nuxt.mdc",
     "files.autoGuessEncoding": false
@@ -19,8 +16,7 @@
     "editor.formatOnSave": false
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always",
-    "source.fixAll.stylelint": "always"
+    "source.fixAll.eslint": "always"
   },
   "editor.formatOnSave": true,
   "editor.tabSize": 3,
@@ -33,12 +29,6 @@
   "errorLens.messageTemplate": "$severity $message",
   "iconify.inplace": false,
   "js/ts.tsdk.path": "node_modules/typescript/lib",
-  "stylelint.validate": [
-    "css",
-    "postcss",
-    "scss",
-    "vue"
-  ],
   "vue.autoInsert.dotValue": true,
   "vue.format.template.initialIndent": false,
   "vue.inlayHints.destructuredProps": true,
