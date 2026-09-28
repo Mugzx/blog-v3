@@ -1,8 +1,8 @@
 ---
-title: 我的 mihomo 配置与理解
-description: 记录我对 mihomo 配置的理解与总结，解释 DNS、hosts、规则集、节点线路等每一项为什么要这样写。
+title: 米哈游的使用解读，可以快速入坑
+description: 这是我入坑米哈游时根据配置写的文章，在内容上，我会更偏向为什么这么写，而 DNS 是重要的一部分，理解下来并不难，是十分甚至九分值得研究的。
 date: 2026-08-27 18:20:47
-updated: 2026-09-06 03:54:32
+updated: 2026-09-28 10:27:42
 categories: [随笔]
 tags: [mihomo, 配置, 分流]
 references:
@@ -14,7 +14,15 @@ references:
     link: https://blog.skk.moe/post/how-to-store-way-too-many-domains-and-ips-101/
   - title: Clash.Meta DNS 配置指南 - AA博客
     link: https://blog.akise.app/posts/clash-dns-configure/
-  - title: Telegram View @appshub_channel
+  - title: 节点域名、Hosts 与私有 DNS 联动模型
+    link: https://xvsvtsama.github.io/mihomo-config-self/proxy-infrastructure-domain-protection-model.html
+  - title: Linux配置mihomo代理并开启TUN模式 | 小贺同学的blog
+    link: https://zfxt.top/posts/70b7a805/index.html
+  - title: Mihomo使用入门 - SA的自留地 & 重启计划
+    link: https://moe.sakanoy.com/mihomo%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/
+  - title: Mihomo 配置教程：从零写一份完整配置文件（DNS / TUN / 分流规则详解）
+    link: https://iyyh.net/posts/2024/09/mihomo-self-config
+  - title: "Telegram: View @appshub_channel"
     link: https://t.me/appshub_channel
 ---
 
@@ -24,6 +32,8 @@ references:
 ::
 
 ~~我的记忆力已经有点不太好了，这篇文章主要是为了写为什么这样做。~~ 本文我经常写一会想一会，生怕 :tip[漏了内容]{tip="后面可能还要修修补补💦"}，所以写得有点长。但基本是我对配置的理解和他人的总结，所讲的内容不是配置的全部，完整的可以前往 [MyClash/Config/myclash.yaml](https://github.com/Mugzx/MyClash/blob/main/Config/myclash.yaml) 查看。
+
+从写这篇文章开始我就觉得会有一定争论产生，如果是因为这样影响到你了，看到这就该离开了就好。当初写出来的时候就压根没在意宣传，而是在意解法，要评判欢迎把页尾部分的加进去。
 
 ## DNS
 
@@ -47,6 +57,53 @@ dns:
     'rule-set:cn': *chinaDNS
   proxy-server-nameserver: *chinaDNS
   direct-nameserver: *chinaDNS
+```
+
+这些是基本的 DNS 解析配置字段，在本文后面还会再出现。
+
+```mermaid
+flowchart TD
+  Rule[匹配规则]
+  Domain[匹配到域名规则]
+  IP[匹配到目标 IP 规则]
+  Resolve[解析域名]
+
+  NameServer[使用 nameserver 查询]
+  Policy[匹配 nameserver-policy]
+  Concurrent[使用 nameserver 和 fallback 并发查询]
+  Filter[匹配 fallback-filter]
+  DirectNS[使用 direct-nameserver 重新解析]
+
+  GetIP[查询得到IP]
+
+  Proxy[发送域名给代理]
+  Direct[使用 IP 直接连接]
+
+  Rule -->  Domain
+  Rule --> IP
+
+  Domain -- 域名匹配到直连 --> Resolve
+  Domain -- 域名匹配到直连并配置了 direct-nameserver --> DirectNS
+
+  IP --> Resolve
+
+  Resolve -- 配置了 nameserver-policy --> Policy
+  Policy -- 未匹配到 --> NameServer
+  Policy --> GetIP
+  Resolve -- 未配置 nameserver-policy --> NameServer
+
+  NameServer -- 配置了 fallback --> Concurrent
+  Concurrent --> Filter
+  Filter --> GetIP
+  NameServer -- 未配置 fallback --> GetIP
+
+  GetIP -- 匹配到直连并配置了 direct-nameserver --> DirectNS
+  DirectNS --> Direct
+
+  GetIP -- IP 匹配到代理 --> Proxy[发送域名给代理]
+  Domain -- 域名匹配到代理 --> Proxy
+
+  GetIP -- IP 匹配到直连 --> Direct
 ```
 
 - `default-nameserver` 是「默认解析 DNS 的 DNS」解析服务器，不填也会有内核进行处理。
@@ -78,7 +135,7 @@ hosts:
 
 ```yaml
 hosts:
-  'services.googleapis.cn': ['services.googleapis.com']
+  'services.googleapis.cn': 'services.googleapis.com'
 ```
 
 成因是该域名被解析为国内 IP，只要让 `services.googleapis.cn` 走代理就没有问题。
@@ -101,7 +158,7 @@ hosts:
 
 ::alert{type="warning"}
 #default
-GeoData 臃肿的体积对软、硬路由这类设备十分甚至九分的不友好，更推荐用 `RULE-SET` 按需添加。
+GeoData 臃肿的体积对软、硬路由这类设备十分甚至九分的不友好，更推荐用 `RULE-SET` 按需添加，参考 [FAQ · nikkinikki-org/OpenWrt-nikki Wiki](https://github.com/nikkinikki-org/OpenWrt-nikki/wiki/FAQ#%E8%87%AA%E5%8A%A8%E4%B8%8B%E8%BD%BD%E9%9D%A2%E6%9D%BFgeox%E6%95%B0%E6%8D%AE%E5%A4%B1%E8%B4%A5%E6%88%91%E6%83%B3%E6%89%8B%E5%8A%A8%E4%B8%8A%E4%BC%A0%E9%9D%A2%E7%89%88geox-%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E8%AF%A5%E6%80%8E%E4%B9%88%E5%81%9A)。
 ::
 
 规则大致可以分为**三类两种**：三类指的是 [规则集合内容 - 虚空终端 Docs](https://wiki.metacubex.one/config/rule-providers/content/)，两种指的是域名规则和目标 IP 规则。
@@ -114,24 +171,13 @@ GeoData 臃肿的体积对软、硬路由这类设备十分甚至九分的不友
 
 下文的 `cn_ip` 放在 `MATCH` 规则之前，可以避免多余的 DNS 解析。
 
-### 屏蔽国外 QUIC，但排除国内
-
-作用写在小标题上了。这条规则略有争议，主要是它并没有完整地放行国内流量。
-
-```yaml
-rules:
-  - AND,((NETWORK,UDP),(DST-PORT,443),(NOT,((OR,((RULE-SET,geolocation-cn),(RULE-SET,cn_ip,no-resolve)))))),REJECT
-```
-
-但多数时候，规则所放行的就足够使用了。
-
 ### no-resolve
 
 *「如在更早的匹配中触发了 dns 解析，则依旧会匹配到添加了 `no-resolve` 选项的 `目标IP` 类规则。」*
 
 另外，我参考了 [路由规则 - 虚空终端 Docs](https://wiki.metacubex.one/config/rules/#no-resolve) 对 `no-resolve` 的描述：
 
-- 一旦触发了 DNS 解析，之后的规则中，域名都会先被解析成 IP，再参与后续的域名匹配。
+- 一旦触发了 DNS 解析，后续的规则中，域名及其解析出的 IP 都会参与匹配。
 
 - 对于 DNS 记录被修改、或被污染为 `0.0.0.0` 或 `127.0.0.1` 的域名，一旦触发解析，就可能让它走直连。
 
@@ -145,8 +191,8 @@ rules:
 
 ```yaml
 rules:
-  - RULE-SET,geolocation-!cn,默认代理
   - RULE-SET,geolocation-cn,本地直连
+  - RULE-SET,geolocation-!cn,默认代理
   - RULE-SET,cn_ip,本地直连
   - match,漏网之鱼
 ```
@@ -172,18 +218,35 @@ rules:
 
 `cn_ip` 会根据 `nameserver-policy` 的 `'rule-set:cn': *chinaDNS` 解析国内域名规则集，这里不能用 `no-resolve`——前面的铺垫都是为了最后的兜底，如果这里不做 DNS 解析，就变成纯目标 IP 匹配了。
 
+### 屏蔽国外 QUIC，但排除国内
+
+作用写在小标题上了。这条规则略有争议，主要是它并没有完整地放行国内流量。
+
+```yaml
+rules:
+  - AND,((NETWORK,UDP),(DST-PORT,443),(NOT,((OR,((RULE-SET,geolocation-cn),(RULE-SET,cn_ip,no-resolve)))))),REJECT
+```
+
+但多数时候，规则所放行的就足够使用了。
+
+## 联机
+
+我玩的联机游戏不多，但遇到的联机方式基本都是走 `IP:Port` 加高位端口的 UDP 协议，也有用域名连接的《Minecraft》。
+
+《泰坦陨落 2》用 AWS，《饥荒》用 Beeline Home，《星露谷物语》用 Valve 等服务器；在覆盖面上，GeoIP 不如 ASN 覆盖得全，它只覆盖主流、常见的 IP 段，一些小众 IP 段就无法用 GeoIP 控制分流，此时用 ASN 是更合适的选择。
+
 ## 节点线路分配
 
 ::alert
 #default
-这里默认你是直接使用自己写的配置，并且在使用多个节点提供商。
+这里默认你是直接使用自己写的配置，并且在使用多个代理提供商。
 ::
 
-中转和专线的代理提供商分配代理节点线路的方式大致有两种：私有 DNS 和 hosts 字段映射，也有同时使用两种的。它们用这两种方式来决定节点走哪条线路；如果使用公共 DNS，可能被分配到较差的线路，甚至节点不可用。
+中转和专线的一线代理提供商分配代理节点线路的方式大致有两种：私有 DNS 和 hosts 真假映射，也有同时使用两种的。它们用这两种方式来决定节点走哪条线路；如果使用公共 DNS，可能被分配到较差的线路，甚至节点不可用。
 
-### 私有 DNS
+### 仅私有 DNS
 
-主要是用 `nameserver-policy` 字段来分配线路。
+常见 `nameserver-policy` 或者 `proxy-server-nameserver` 字段来指定域名分配线路。
 
 ```yaml
 dns:
@@ -196,17 +259,19 @@ dns:
     - 8.8.8.8
   nameserver-policy:
     - # 这里会是私有 DNS
+  proxy-server-nameserver:
+    - # 这里也会是私有 DNS
 ```
 
-在自己的配置里，把 `nameserver-policy` 改写成 `proxy-server-nameserver-policy` 即可解决；一般这种写法不会出现 :tip[`proxy-server-nameserver`]{tip="如果只有这个字段出现，同样指定代理节点的 DNS 即可"}。
+把含有私有 DNS 部分 **指定** 出，用 `proxy-server-nameserver-policy` 针对指定域名单独指定解析来源。
 
-### hosts 字段映射
+### 仅真假映射
 
 ::alert
-我只遇到过私有 DNS 的配置，对 hosts 字段映射的处理没什么把握，不一定可用。
+我只遇到过私有 DNS 的配置，对映射的处理没什么把握，不一定可用。
 ::
 
-`proxy-server-nameserver` 一般搭配 `udp://127.0.0.1:1053` 以及 hosts 字段出现。
+`proxy-server-nameserver` 一般搭配 `udp://127.0.0.1:1053` 以及 hosts 真假出现。
 
 ```yaml
 dns:
@@ -214,32 +279,35 @@ dns:
   listen: 127.0.0.1:1053
   use-hosts: true
   nameserver:
-    - 119.29.29.29
     - 223.5.5.5
+    - 114.114.144.114
     - 1.1.1.1
+    - 8.8.8.8
   proxy-server-nameserver:
     - udp://127.0.0.1:1053
+
+hosts:
+  POSSIBLE_BAD_RESULT_A: REAL_SERVICE_ENTRY_A
+  POSSIBLE_BAD_RESULT_B: REAL_SERVICE_ENTRY_B
+  POSSIBLE_BAD_RESULT_C: REAL_SERVICE_ENTRY_C
 ```
 
 指定节点域名用 `udp://127.0.0.1:1053` 解析。
 
 ```yaml
 proxy-server-nameserver-policy:
-  proxy1.test.com:
-    - udp://127.0.0.1:1053
-  proxy2.test.com:
-    - udp://127.0.0.1:1053
-  proxy3.test.com:
+  +.test.com:
     - udp://127.0.0.1:1053
 ```
 
-操作大概类似这样，再 :key{code="C" ctrl} 对应的 hosts 映射到自己的配置里。
+不过在 mihomo 中可以使用 `proxy-providers.override.override-expr` 更优雅地解决。
 
 ::folding
 #title
-用 `override-expr` 处理
+用 `proxy-providers.override.override-expr` 处理
 #default
-不过在 mihomo 中可以使用 `proxy-providers` 的 `override.override-expr` 更优雅地解决。
+
+另有一种是自己没写 `proxy-server-nameserver`，复制机场配置即可的。来源为 [Telegram: Contact @kuromis_xiaoxi](https://t.me/kuromis_xiaoxi)。
 
 ```yaml
 proxy-providers:
@@ -252,20 +320,29 @@ proxy-providers:
           - '(select(.server == "A") | .server) = "B"'
 ```
 
-A 是 `proxies` 里的 `server` 字段，B 应该填 IP。
+A 和 B 分别为 hosts 值左侧以及右侧域名，也可能是 IP。
 ::
+
+### 混合分配的代理
+
+前面说过有同时使用两种方式的代理提供商。
+
+```mermaid
+flowchart LR
+  A[原始 server<br>订阅里的假节点域名] --> B[hosts 关系<br>假域名改写成真域名]
+  B --> C[最终 server<br>真正的服务入口]
+  C --> D[节点 DNS 优先级<br>决定由谁解析]
+  D --> E[真实解析地址<br>私有 DoH 给出的入口]
+  E --> F[节点连接]
+```
+
+二者大致是样在使用的，解决方法同上述结合可得。
 
 ## 健康检查测试地址
 
 选择标准很简单：任播（Anycast），国内测速不超时、延迟别太高即可。
 
 代理组我用 Google 的 `connectivitycheck.gstatic.com`，而直连组则换成了华为的 `connectivitycheck.platform.hicloud.com`。
-
-## 联机
-
-我玩的联机游戏不多，但遇到的联机方式基本都是走 `IP:Port` 加高位端口的 UDP 协议，也有用域名连接的《Minecraft》。
-
-《泰坦陨落2》用 AWS，《饥荒》用 Beeline Home，《星露谷物语》用 Valve 等服务器；在覆盖面上，GeoIP 不如 ASN 覆盖得全，它只覆盖主流、常见的 IP 段，一些小众 IP 段就无法用 GeoIP 控制分流，此时用 ASN 是更合适的选择。
 
 ## 一些过时配置
 

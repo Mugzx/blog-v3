@@ -2,7 +2,7 @@
 title: 为你的每一次 Commit 添加 SSH 签名
 description: 探索如何配置 SSH 签名，确保每次提交的身份验证，并解决常见的配置问题。
 date: 2025-09-13 11:30:35
-updated: 2025-12-10 02:59:07
+updated: 2026-09-28 10:27:42
 categories: [代码]
 tags: [SSH]
 references:

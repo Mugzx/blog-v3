@@ -2,7 +2,7 @@
 title: Ungoogled Chromium 简单体验及配置
 description: 介绍 Ungoogled Chromium 的优势，分享安装方法及常用实验功能设置，替代原版 Google Chrome，提升隐私与使用体验。
 date: 2025-10-24 00:11:45
-updated: 2026-05-24 03:58:22
+updated: 2026-09-28 10:27:42
 categories: [分享]
 tags: [Google Chrome, Ungoogled Chromium]
 references:
@@ -14,11 +14,11 @@ references:
 
 ## 换一个
 
-Google Chrome 总是会在用户数据的路径中生成AI模型相关文件，占用了我很多磁盘空间。
+Google Chrome 总是会在用户数据的路径中生成 AI 模型相关文件，占用了我很多磁盘空间。
 
 :copy{prompt="Chrome" code="%LOCALAPPDATA%\Google\Chrome\User Data\OptGuideOnDeviceModel"}
 
-而这个东西无法通过 `chrome://flags` 实验特性管理将其关闭。当然，你也可以通过修改文件夹权限，注册表等操作来限制这个东西的生成，但我始终觉得不如 :tip[换个浏览器来的好]{tip="其实是当时的Mugzx把谷歌账号搞没了🫠"}。
+而这个东西无法通过 `chrome://flags` 实验特性管理将其关闭。当然，你也可以通过修改文件夹权限，注册表等操作来限制这个东西的生成，但我始终觉得不如 :tip[换个浏览器来的好]{tip="其实是当时的 Mugzx 把谷歌账号搞没了🫠"}。
 
 ## 来安装吧
 

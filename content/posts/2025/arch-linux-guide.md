@@ -2,7 +2,7 @@
 title: Arch Linux 安装记录
 description: 文章记录了手动安装 Arch Linux 过程中一些问题的解决方法以及基础的系统美化，以便快速上手。
 date: 2025-11-23 19:59:22
-updated: 2026-05-02 12:19:33
+updated: 2026-09-28 10:27:42
 categories: [随笔]
 tags: [Arch, Linux, 指南]
 references:
@@ -13,11 +13,11 @@ references:
 ---
 
 ::timeline
-{2025年11月13日}
+{2025 年 11 月 13 日}
 
-成功安装了Arch Linux，但又因为一些操作把系统搞寄了。
+成功安装了 Arch Linux，但又因为一些操作把系统搞寄了。
 
-{2025年11月23日}
+{2025 年 11 月 23 日}
 
 第二次成功安装了 Arch Linux，遂准备写下这篇文章进行记录。
 ::
@@ -33,7 +33,7 @@ references:
 ### 引导与参数
 
 ::chat
-{:省略了很多聊天记录...}
+{:省略了很多聊天记录……}
 
 {.Mugzx}
 
@@ -47,7 +47,7 @@ references:
 
 ::
 
-Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip[兼容问题]{tip="比如以 pcieport 为开头的报错信息"}。
+Pinpe 大佬指出我的无线网卡 Intel 3165AC 可能与 Linux 有一些 :tip[兼容问题]{tip="比如以 pcieport 为开头的报错信息"}。
 
 :copy{lang="bash" code="vim /etc/default/grub"}
 
@@ -56,7 +56,7 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 - 取消 `GRUB_DISABLE_OS_PROBER=false` 的注释，以便进行双系统引导。
   - **（可选）** 选择 rEFind 进行引导则不添加。
 
-- 英特尔的硬件请在 `GRUB_CMDLINE_LINUX_DEFAULT` 中添加 `nowatchdog` 和 `modprobe.blacklist=iTCO_wdt` 。
+- 英特尔的硬件请在 `GRUB_CMDLINE_LINUX_DEFAULT` 中添加 `nowatchdog` 和 `modprobe.blacklist=iTCO_wdt`。
 
 ## 基本美化
 
@@ -65,11 +65,11 @@ Pinpe 大佬指出我的无线网卡 intel 3165AC 可能与 Linux 有一些 :tip
 :copy{lang="bash" code="sudo pacman -S noto-fonts noto-fonts-emoji ttf-sarasa-gothic"}
 :copy{lang="bash" code="sudo pacman -S ttf-jetbrains-mono-nerd"}
 
-调整所有字体为 Sans Serif 12pt ，等宽字体设置为 Monospace ，大小同样为12pt。
+调整所有字体为 Sans Serif 12pt，等宽字体设置为 Monospace，大小同样为 12pt。
 
 ### 窗口
 
-窗口可以在显示和监视器-显示器配置中调整屏幕缩放率，推荐为100%。
+窗口可以在显示和监视器-显示器配置中调整屏幕缩放率，推荐为 100%。
 
 在颜色和主题-窗口装饰元素中可以调整右上角的窗口按钮大小，推荐设置为中等。
 
@@ -119,7 +119,7 @@ link: /2026/cudy-tr3000
 
 :copy{prompt="$" code='sudo pacman -S mesa lib32-mesa xf86-video-amdgpu vulkan-radeon lib32-vulkan-radeon'}
 
-在2018年之前推出的 CPU ，需要安装的是 `libva-intel-driver`，具体可见关于 [Coffee Lake](https://wiki.archlinux.org/title/Hardware_video_acceleration#VA-API) 的介绍。
+在 2018 年之前推出的 CPU，需要安装的是 `libva-intel-driver`，具体可见关于 [Coffee Lake](https://wiki.archlinux.org/title/Hardware_video_acceleration#VA-API) 的介绍。
 
 :copy{prompt="$" code='sudo pacman -S intel-media-driver'}
 

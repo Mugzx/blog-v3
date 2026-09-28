@@ -2,7 +2,7 @@
 title: 对“机场”面板的不完整调查
 description: 如题所示这其实是算一篇不完整的文章，写得有点累了就不想再写。可能后继有人，也可能后继无人来续写？总之，之后就看心情或者有能力再写了。
 date: 2026-07-23 16:29:01
-updated: 2026-08-01 00:06:21
+updated: 2026-09-28 10:27:42
 categories: [分享]
 tags: [研究, 调查, 识别]
 references:
@@ -20,7 +20,7 @@ references:
 
 稍微参考了同类网站，最后确定用的是 [codeman857/EZ-THEME-R](https://github.com/codeman857/EZ-THEME-R) 前端主题，另外还有一些配置也被打包进来，可以明文查看。`PANEL_TYPE` 字段写的是 `Xiao-V2board`，又或者是商品简介上的**自研高性能后端**。
 
-逆向调查到这里就应该结束，很无奈我最终也不知道怎么解决，大概这个机场主是故意不开IP去重的。写到篇幅多少有点短，我决定把这个话题延伸下去。
+逆向调查到这里就应该结束，很无奈我最终也不知道怎么解决，大概这个机场主是故意不开 IP 去重的。写到篇幅多少有点短，我决定把这个话题延伸下去。
 
 ## 主题
 
@@ -28,19 +28,22 @@ references:
 
 ### 识别
 
-像某分一样风格的机场，是默认的v2board主题。特征为资源存储在 `./theme/default/assets/` 路径中，但这个特征不适用于所有主题。比如上述的 [codeman857/EZ-THEME-R](https://github.com/codeman857/EZ-THEME-R) 前端主题就是一个例子，资源存储在 `./static/` 路径下。
+像某分一样风格的机场，是默认的 v2board 主题。特征为资源存储在 `./theme/default/assets/` 路径中，但这个特征不适用于所有主题。比如上述的 [codeman857/EZ-THEME-R](https://github.com/codeman857/EZ-THEME-R) 前端主题就是一个例子，资源存储在 `./static/` 路径下。
 
 某山使用的是 [vlesstop/v2board-theme-buddy](https://github.com/vlesstop/v2board-theme-buddy) 前端主题。在 `./theme/rocket/config.js` 可以找到闭源构建地址，目前已经停更。
 
-L站内有名的某梦，同样的步骤发现可能是 [MALA主题高级版](https://yuzaimala.store/archives/a96d87be-be48-4877-aa6c-1edb734a27f9)，是一个需要付费的主题。
+某狗云，与上文相同，使用的是 [Bitsea1/vitayr](https://github.com/Bitsea1/vitayr) 闭源构建主题。
+
+L 站内有名的某梦，同样的步骤发现可能是 [MALA 主题高级版](https://yuzaimala.store/archives/a96d87be-be48-4877-aa6c-1edb734a27f9)，是一个需要付费的主题。
+
 
 ::quote{icon="tabler:files"}
-（待补充...）
+（待补充……）
 ::
 
 ## 面板
 
-根据 arXiv 上的相关论文统计，95%的机场所使用的面板为 V2board 和 SSPanel 后端。如果有漏洞的话还是比较危险的，比如 [Xboard / V2Board: Magic Link Token Leak - Unauthenticated Account Takeover](https://chocapikk.com/posts/2026/xboard-v2board-account-takeover/)。
+根据 arXiv 上的相关论文统计，95% 的机场所使用的面板为 V2board 和 SSPanel 后端。如果有漏洞的话还是比较危险的，比如 [Xboard / V2Board: Magic Link Token Leak - Unauthenticated Account Takeover](https://chocapikk.com/posts/2026/xboard-v2board-account-takeover/)。
 
 以下是开源地址，这些面板绝大多数是由 PHP 开发而来的，我只梳理了大概的前后时间关系，写得也很大概，并没有太深入研究。
 

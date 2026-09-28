@@ -1,8 +1,8 @@
 ---
-title: 用 Rclone+FFmpeg 代替臃肿的上传工具
-description: PicGO 和 PicList 虽然配置简单容易上手，但却是用 Electron 开发的。我嫌弃臃肿因此并不怎么想用。
+title: 用 Rclone + FFmpeg 代替臃肿的上传工具
+description: PicGo 和 PicList 虽然配置简单容易上手，但却是用 Electron 开发的。我嫌弃臃肿因此并不怎么想用。
 date: 2026-05-06 17:02:31
-updated: 2026-05-06 17:02:31
+updated: 2026-09-28 10:27:42
 categories: [代码]
 tags: [图床, Rclone, FFmpeg]
 ---

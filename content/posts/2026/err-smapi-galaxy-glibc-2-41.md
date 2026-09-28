@@ -2,6 +2,7 @@
 title: 【转载】在 Linux 发行版下运行星露谷时遇到的错误
 description: 在 Arch Linux 更新 glibc 2.41 后遇到星露谷物语 Galaxy API 初始化错误？本文提供使用 patchelf 清除 execstack 的临时解决方案，修复多人联机问题。
 date: 2026-08-23 18:22:23
+updated: 2026-09-28 10:27:42
 categories: [分享]
 tags: [转载, 星露谷物语, Bug, Linux]
 references:
@@ -23,7 +24,7 @@ TypeInitializationException: The type initializer for 'Galaxy.Api.GalaxyInstance
  ---> ...其他错误信息...
 ```
 
-这个问题会导致无法进行多人游戏，合作界面卡在 “正在连接到在线服务…” 无法联机。
+这个问题会导致无法进行多人游戏，合作界面卡在 “正在连接到在线服务……” 无法联机。
 
 ## 问题解析
 

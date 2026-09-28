@@ -2,7 +2,7 @@
 title: 从 VSCode 到 VSCodium
 description: 一款完全开源的代码编辑器替代方案，轻松从 VSCode 迁移到 VSCodium，享受去遥测的纯净开发体验。
 date: 2025-12-07 15:37:12
-updated: 2025-12-07 18:32:54
+updated: 2026-09-28 10:27:42
 categories: [分享]
 tags: [vscode, vscodium, 开源]
 references:
@@ -45,7 +45,7 @@ VSCodium 与 VSCode 相比去除了遥测功能，并使用 OpenVSX 这个开源
 }
 ```
 
-VSCode还有更完整的`product.json`配置文件，可以选择性的添加对应字段。
+VSCode 还有更完整的`product.json`配置文件，可以选择性的添加对应字段。
 
 ```json [%LOCALAPPDATA%\Programs\Microsoft VS Code\resources\app\product.json]
 {
