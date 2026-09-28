@@ -10,6 +10,10 @@ references:
     link: https://www.aloxaf.com/2025/04/how_to_use_geosite/
   - title: 终于解决Google play商店下载等待中的问题 - 开发调优 - LINUX DO
     link: https://linux.do/t/topic/176332
+  - title: 大陆用户 Google Play 商店无法下载或更新应用的原因分析与解决办法 - 且记
+    link: https://www.yetpage.com/archives/278
+  - title: Google Play 商店的国内 CDN：从密码学入门到分流策略优化
+    link: https://blog.l3zc.com/2025/03/chinese-cdn-used-by-playstore/
   - title: 生活在字典树上 —— 存储和匹配海量的域名和 IP 地址 | Sukka's Blog
     link: https://blog.skk.moe/post/how-to-store-way-too-many-domains-and-ips-101/
   - title: Clash.Meta DNS 配置指南 - AA博客
@@ -240,6 +244,8 @@ rules:
 ::alert
 #default
 这里默认你是直接使用自己写的配置，并且在使用多个代理提供商。
+
+:tip[**世界千变万化，过往经验不保证完全可用，唯有随机应变的大脑才能靠得住。**]{tip="来自西邮 Wiki"}
 ::
 
 中转和专线的一线代理提供商分配代理节点线路的方式大致有两种：私有 DNS 和 hosts 真假映射，也有同时使用两种的。它们用这两种方式来决定节点走哪条线路；如果使用公共 DNS，可能被分配到较差的线路，甚至节点不可用。
@@ -287,12 +293,15 @@ dns:
     - udp://127.0.0.1:1053
 
 hosts:
-  POSSIBLE_BAD_RESULT_A: REAL_SERVICE_ENTRY_A
-  POSSIBLE_BAD_RESULT_B: REAL_SERVICE_ENTRY_B
-  POSSIBLE_BAD_RESULT_C: REAL_SERVICE_ENTRY_C
+  # 这里是我随便举得例子
+  # 目的在于混淆，写出链式也是有可能的
+  'a.cn': ['b.com']
+  'b.com': ['c.cn']
+  'a.com': ['c.com']
+  'a.com': ['114.114.114.114']
 ```
 
-指定节点域名用 `udp://127.0.0.1:1053` 解析。
+还记得前面的 [域名映射](#域名映射) 吗，这里指定节点域名用 `udp://127.0.0.1:1053` 解析，。
 
 ```yaml
 proxy-server-nameserver-policy:
@@ -307,7 +316,7 @@ proxy-server-nameserver-policy:
 用 `proxy-providers.override.override-expr` 处理
 #default
 
-另有一种是自己没写 `proxy-server-nameserver`，复制机场配置即可的。来源为 [Telegram: Contact @kuromis_xiaoxi](https://t.me/kuromis_xiaoxi)。
+另有一种是自己没写 `proxy-server-nameserver`，复制机场配置即可的。来源为 [Telegram: View @kuromis_xiaoxi](https://t.me/kuromis_xiaoxi/706)。
 
 ```yaml
 proxy-providers:
