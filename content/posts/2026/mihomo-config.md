@@ -26,6 +26,8 @@ references:
     link: https://moe.sakanoy.com/mihomo%E4%BD%BF%E7%94%A8%E5%85%A5%E9%97%A8/
   - title: Mihomo 配置教程：从零写一份完整配置文件（DNS / TUN / 分流规则详解）
     link: https://iyyh.net/posts/2024/09/mihomo-self-config
+  - title: mihomo 内核极简防 DNS 泄漏配置（2025 年） - 开发调优 - LINUX DO
+    link: https://linux.do/t/topic/1229287
   - title: "Telegram: View @appshub_channel"
     link: https://t.me/appshub_channel
 ---
@@ -35,7 +37,7 @@ references:
 以下规则集都以 [MetaCubeX/meta-rules-dat](https://github.com/MetaCubeX/meta-rules-dat/) 官方的规则集仓库为例。
 ::
 
-~~我的记忆力已经有点不太好了，这篇文章主要是为了写为什么这样做。~~ 本文我经常写一会想一会，生怕 :tip[漏了内容]{tip="后面可能还要修修补补💦"}，所以写得有点长。但基本是我对配置的理解和他人的总结，所讲的内容不是配置的全部，完整的可以前往 [MyClash/Config/myclash.yaml](https://github.com/Mugzx/MyClash/blob/main/Config/myclash.yaml) 查看。
+~~我的记忆力已经有点不太好了，这篇文章主要是为了写为什么这样做。~~ 本文我经常写一会想一会，生怕 :tip[漏了内容]{tip="后面可能还要修修补补💦"}，所以写得有点长。但基本是我对配置的理解和他人的总结，所讲的内容不是配置的全部，完整的可以前往 [oh-my-clash/config.yaml](https://github.com/Mugzx/oh-my-clash/blob/main/config.yaml) 查看。
 
 从写这篇文章开始我就觉得会有一定争论产生，如果是因为这样影响到你了，看到这就该离开了就好。当初写出来的时候就压根没在意宣传，而是在意解法，要评判欢迎把页尾部分的加进去。
 
@@ -113,7 +115,7 @@ flowchart TD
 - `default-nameserver` 是「默认解析 DNS 的 DNS」解析服务器，不填也会有内核进行处理。
 - `nameserver` 是「默认的 DNS」解析服务器，在这里需要配置兜底的国外 DNS。
 - `nameserver-policy` 是「指定默认的 DNS」解析服务器，在这里配置「国内域名」规则集使用国内 DNS。
-- `proxy-server-nameserver` 是「代理节点的 DNS」解析服务器，不填会遵循 `nameserver` 的设置，但这样会使用国外 DNS，遇到「先有鸡还是先有蛋」问题，所以需要与 `nameserver-policy` 一样使用国内 DNS。
+- `proxy-server-nameserver` 是「代理节点的 DNS」解析服务器，不填会遵循 `nameserver` 的设置，但这样会使用国外 DNS，遇到 [「先有鸡还是先有蛋」](https://wiki.metacubex.one/config/dns/#dns_1) 问题，所以需要与 `nameserver-policy` 一样使用国内 DNS。
 - `direct-nameserver` 是「直连的 DNS」解析服务器，如果按照上文一样的配置，即使去除最终的解析结果也不会有 :tip[太大变化]{tip="对目标 IP 规则来说，反而可以说减少一次 DNS 解析"}。
   - 但从解析流程图上看，其实增加了域名规则的解析过程，所以还是更推荐填写。
 
@@ -191,12 +193,12 @@ GeoData 臃肿的体积对软、硬路由这类设备十分甚至九分的不友
 
 ### geolocation
 
-`geolocation-!cn` 里包含 `gfw`，`geolocation-cn` 比「国内域名」规则集更准确，后者比较宽泛，更适合用来做 DNS 分流而不是路由分流。
+`geolocation-cn` 比「国内域名」规则集更准确，后者比较宽泛，更适合用来做 DNS 分流而不是路由分流。
 
 ```yaml
 rules:
   - RULE-SET,geolocation-cn,本地直连
-  - RULE-SET,geolocation-!cn,默认代理
+  - RULE-SET,gfw,默认代理
   - RULE-SET,cn_ip,本地直连
   - match,漏网之鱼
 ```
@@ -237,7 +239,7 @@ rules:
 
 我玩的联机游戏不多，但遇到的联机方式基本都是走 `IP:Port` 加高位端口的 UDP 协议，也有用域名连接的《Minecraft》。
 
-《泰坦陨落 2》用 AWS，《饥荒》用 Beeline Home，《星露谷物语》用 Valve 等服务器；在覆盖面上，GeoIP 不如 ASN 覆盖得全，它只覆盖主流、常见的 IP 段，一些小众 IP 段就无法用 GeoIP 控制分流，此时用 ASN 是更合适的选择。
+《泰坦陨落 2》用 AWS 的服务器，《星露谷物语》用 V 社的服务器；在覆盖面上，GeoIP 不如 ASN 覆盖得全，它只覆盖主流、常见的 IP 段，一些小众 IP 段就无法用 GeoIP 控制分流，此时用 ASN 是更合适的选择。
 
 ## 节点线路分配
 

@@ -5,9 +5,9 @@ import { myFeed } from '../blog.config'
 import { getFavicon, getGithubAvatar, getGithubIcon, getOciqGroupAvatar, getOicqAvatar, OicqAvatarSize } from './utils/img'
 
 export default [
-	// #region 朋友们
+	// #region 朋友
 	{
-		name: '朋友们',
+		name: '朋友',
 		desc: '还有我自己。',
 		// @keep-sorted { "keys": ["date"] }
 		entries: [
