@@ -72,6 +72,7 @@ const mainDomainIcons: Record<string, string> = {
 	'netlify.app': 'simple-icons:netlify',
 	'pages.dev': 'simple-icons:cloudflare',
 	'qq.com': 'ri:qq-fill',
+	't.me': 'ri:telegram-fill',
 	'taobao.com': 'ri:taobao-fill',
 	'thisis.host': 'tabler:star-filled',
 	'tmall.com': 'ri:taobao-fill',

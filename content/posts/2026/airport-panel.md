@@ -30,16 +30,9 @@ references:
 
 像某分一样风格的机场，是默认的 v2board 主题。特征为资源存储在 `./theme/default/assets/` 路径中，但这个特征不适用于所有主题。比如上述的 [codeman857/EZ-THEME-R](https://github.com/codeman857/EZ-THEME-R) 前端主题就是一个例子，资源存储在 `./static/` 路径下。
 
-某山使用的是 [vlesstop/v2board-theme-buddy](https://github.com/vlesstop/v2board-theme-buddy) 前端主题。在 `./theme/rocket/config.js` 可以找到闭源构建地址，目前已经停更。
+某山使用的是 [vlesstop/v2board-theme-buddy](https://github.com/vlesstop/v2board-theme-buddy) 前端主题，在 `./theme/rocket/config.js` 可以找到闭源构建地址，目前已经停更；某狗云，与上文相同，使用的是 [Bitsea1/vitayr](https://github.com/Bitsea1/vitayr) 闭源构建主题；L 站内有名的某梦，同样的步骤发现可能是 [MALA 主题高级版](https://yuzaimala.store/archives/a96d87be-be48-4877-aa6c-1edb734a27f9)，是一个需要付费的主题。
 
-某狗云，与上文相同，使用的是 [Bitsea1/vitayr](https://github.com/Bitsea1/vitayr) 闭源构建主题。
-
-L 站内有名的某梦，同样的步骤发现可能是 [MALA 主题高级版](https://yuzaimala.store/archives/a96d87be-be48-4877-aa6c-1edb734a27f9)，是一个需要付费的主题。
-
-
-::quote{icon="tabler:files"}
-（待补充……）
-::
+其余主题收集可以参见 [Telegram: View @star_gleam](https://t.me/star_gleam/266)。
 
 ## 面板
 

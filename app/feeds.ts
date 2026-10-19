@@ -31,7 +31,7 @@ export default [
 				link: 'https://www.linexic.top/',
 				feed: 'https://www.linexic.top/rss.xml',
 				icon: getFavicon('www.linexic.top'),
-				avatar: getOicqAvatar('2793151375', OicqAvatarSize.Size100),
+				avatar: getGithubAvatar('LineXic'),
 				archs: ['Astro', 'Vercel'],
 				date: '2025-01-24',
 				comment: '交流技术，互相分享，经常鼓励我。',
